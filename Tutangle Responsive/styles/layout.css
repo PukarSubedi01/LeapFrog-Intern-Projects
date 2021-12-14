@@ -12,7 +12,7 @@ nav {
   padding: 12px 0px;
 }
 .main {
-  margin-top: 28px;
+  margin-top: 14px;
 }
 
 .menubar {
@@ -24,8 +24,8 @@ nav {
 }
 
 .mainContent {
-  width: 518px;
-  margin-left: 28px;
+  /* width: 100%; */
+  margin: 0 14px;
 }
 
 .rightmenubar {
