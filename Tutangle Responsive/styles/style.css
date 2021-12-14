@@ -12,7 +12,8 @@
   float: right;
   position: absolute;
   right: 0;
-  padding: 14px 15px 0 0;
+  top: 15px;
+  right: 14px;
 }
 .userDetails ul li {
   display: inline-block;
@@ -39,7 +40,7 @@ nav ul li {
   margin: 2px 0 0 14px;
 }
 .navMenu li {
-  margin: 0 26px 0 11px;
+  margin: 0 24px 0 11px;
 }
 
 .navMenu li:hover {

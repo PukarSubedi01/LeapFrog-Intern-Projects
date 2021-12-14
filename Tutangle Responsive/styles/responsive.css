@@ -1,0 +1,69 @@
+@media only screen and (min-width: 600px) {
+  .footerCopyright {
+    float: right;
+    margin: 0 14px 0 0;
+  }
+  .footerMenu {
+    float: left;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .main {
+    margin-top: 28px;
+  }
+  .mainWrapper {
+    float: left;
+  }
+  .container {
+    width: 768px;
+    margin: 0 auto;
+  }
+  header {
+    height: 85px;
+  }
+  .logoImgDiv {
+    float: left;
+  }
+  .logoContainer {
+    width: 582px;
+    float: left;
+  }
+  .logoContainer div a img {
+    max-width: 223px;
+  }
+  .search {
+    float: right;
+    margin-top: 38px;
+  }
+  .userDetails {
+    position: relative;
+    text-align: right;
+    float: right;
+    right: 0;
+    padding: 15px 0px;
+  }
+  .navHamburger {
+    display: none;
+  }
+  .navMenu {
+    display: block;
+  }
+  .mainContent {
+    /* width: 518px; */
+    /* margin-left: 28px; */
+  }
+  .rightmenubar {
+    display: block;
+  }
+}
+@media only screen and (min-width: 1002px) {
+  .menubar {
+    display: block;
+  }
+  .container {
+    width: 939px;
+  }
+  .mainContent {
+    float: right;
+  }
+}
