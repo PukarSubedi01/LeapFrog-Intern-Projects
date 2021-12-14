@@ -1,0 +1,412 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/layout.css" />
+    <link rel="stylesheet" href="./styles/reset.css" />
+    <link rel="stylesheet" href="./styles/style.css" />
+    <title>Tutangle- Responsive</title>
+  </head>
+  <body>
+    <!---------------------------------------------Header----------------------------  -->
+    <header>
+      <div class="container clearfix">
+        <div class="logoContainer clearfix">
+          <div>
+            <a href="#" 
+              ><img src="assets/tutangleLogo.png" alt="Tutangle's logo"
+            /></a>
+          </div>
+          <div class="search floatLeft clearfix">
+            <input type="text" value="Search for entries, title" />
+            
+            <div class = "floatRight">
+              <div class = "floatLeft"> 
+                <img src="./assets/close.png" alt="">
+              </div>
+             <div class="floatLeft"> 
+              <img src="./assets/magnifier.png" alt="">
+             </div>
+             <button>
+              SEARCH
+            </button>
+            </div>
+            
+          </div>
+        </div>
+        <div class="userDetails">
+          <h4>Joe Burros</h4>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#" >Settings</a></li>
+            <li><a href="#" >Logout</a></li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <!-----------------------------------------------nav----------------------------  -->
+    <nav>
+      <div class="container clearfix">
+        <div class="navHamburger">
+          <img src="./assets/navHamburger.png" alt="navHamburger Icon">
+        </div>
+        <ul class="navMenu">
+          <li><a href="#" >Create New Entry</a></li>
+          <li><a href="#">My Topic Boxes</a></li>
+          <li><a href="#" >Friends</a></li>
+          <li><a href="#">Invite New Member</a></li>
+        </ul>
+
+        <ul class="navRightContent">
+          <li>
+            <img src="./assets/topicBoxIcon.png" alt="" /><span
+              >Topic Boxes Invites - 2</span
+            >
+          </li>
+          <li>
+            <img src="./assets/friendsIcon.png" alt="" /><span
+              >Friend Requests - 0</span
+            >
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <!-- -------------------------------------main----------------------- -->
+    <main class="main container clearfix">
+      <div class="floatLeft clearfix">
+        <!-- Left Side Bar -->
+        <div class="menubar floatLeft">
+          <div>
+            <div class="sideMenuHeading">
+              <h2>Recent Searches</h2>
+            </div>
+            <ul>
+              <li class="clearfix">
+                <span class="floatLeft"
+                  ><a href="#" 
+                    >Nick Cave and the <br />
+                    Bad Seeds</a
+                  ></span
+                >
+                <span class="floatRight">
+                  <img src="./assets/downloadIcon.png" alt="" />
+                </span>
+              </li>
+              <li class="clearfix">
+                <span class="floatLeft"
+                  ><a href="#">African Animals</a></span
+                >
+                <span class="floatRight">
+                  <img src="./assets/downloadIcon.png" alt="" />
+                </span>
+              </li>
+            </ul>
+            <div class="sideMenuHeading">
+              <div class="menubar-container">
+                <h2>Recent Searches</h2>
+              </div>
+            </div>
+            <ul class="menubar-container">
+              <li class="clearfix">
+                <span class="floatLeft">
+                  <a href="#" 
+                    >Different versions of the Tristan Und Isolde Prelude</a
+                  >
+                </span>
+                <span class="floatRight">
+                  <img src="./assets/hamburger.png" alt="" />
+                </span>
+              </li>
+              <li class="clearfix">
+                <span class="floatLeft">
+                  <a href="#">Music</a>
+                </span>
+                <span class="floatRight">
+                  <img src="./assets/hamburger.png" alt="" />
+                </span>
+              </li>
+              <li class="clearfix">
+                <span class="floatLeft">
+                  <a href="#" >Guitar</a>
+                </span>
+                <span class="floatRight">
+                  <img src="./assets/hamburger.png" alt="" />
+                </span>
+              </li>
+              <li class="clearfix">
+                <span class="floatLeft">
+                  <a href="#" >Bob Cohen</a>
+                </span>
+                <span class="floatRight">
+                  <img src="./assets/hamburger.png" alt="" />
+                </span>
+              </li>
+              <li class="clearfix">
+                <span class="floatLeft">
+                  <a href="#" >Mark Schnack</a>
+                </span>
+                <span class="floatRight">
+                  <img src="./assets/hamburger.png" alt="" />
+                </span>
+              </li>
+              <li class="clearfix">
+                <span class="floatLeft">
+                  <a href="#" >Jefferson Dickey</a>
+                </span>
+                <span class="floatRight">
+                  <img src="./assets/hamburger.png" alt="" />
+                </span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- Main Content -->
+        <div class="mainContent floatRight">
+          <h1>Entries</h1>
+          <div class="entries">
+            <div class="entriesContainer clearfix">
+              <div class="entries-leftItem entriesItem floatLeft">
+                <div class="heading">
+                  <h5>All Entries</h5>
+                </div>
+                <div class="entriesSubItem-Container clearfix">
+                  <div class="active entriesSubItem floatLeft">
+                    <div><a href="#" >All Members</a></div>
+                  </div>
+                  <div class="entriesSubItem floatRight">
+                    <div><a href="#" >Friends</a></div>
+                  </div>
+                </div>
+              </div>
+              <div class="entries-rightItem entriesItem floatRight">
+                <div class="heading">
+                  <h5>Subscribed</h5>
+                </div>
+                <div class="entriesSubItem-Container clearfix">
+                  <div class="entriesSubItem floatLeft">
+                    <div><a href="#" >New Entries</a></div>
+                  </div>
+                  <div class="entriesSubItem floatRight">
+                    <div>
+                      <a href="#" >New Comments</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- POSTS -->
+          <div class="posts">
+            <div class="post clearfix">
+              <div class="floatLeft">
+                <img src="./assets/AlanCoe.png" alt="" />
+              </div>
+              <div class="floatLeft">
+                <h5>
+                  <a href="#" >
+                    Day for Night by Francois Truffaut, a ground breaking film
+                  </a>
+                </h5>
+                <p>
+                  by
+                  <a href="#" 
+                    ><span class="blueText hyperLinks">Alan Coe</span></a
+                  >
+                  | February 10, 2012 |
+                  <span class="greenText">subscribed</span>
+                </p>
+                <p>
+                  From Topic Box:
+                  <a href="#" 
+                    ><span class="blueText hyperLinks">My Favourite Movies</span></a
+                  >
+                </p>
+              </div>
+            </div>
+
+            <div class="post clearfix">
+              <div class="floatLeft">
+                <img src="./assets/MaryPilot.png" alt="" />
+              </div>
+              <div class="floatLeft">
+                <p class="blueText">NEW ENTRY!</p>
+                <h5>
+                  <a href="#" >
+                    Blade Runner, The Director's Cut
+                  </a>
+                </h5>
+                <p>
+                  by
+                  <a href="#" 
+                    ><span class="blueText hyperLinks">Mary Pilot</span></a
+                  >
+                  | February 8, 2012
+                </p>
+                <p>
+                  From Topic Box:
+                  <a href="#" 
+                    ><span class="blueText hyperLinks">Behind the Scene</span></a
+                  >
+                </p>
+              </div>
+            </div>
+
+            <div class="post clearfix">
+              <div class="floatLeft">
+                <img src="./assets/JimRoy.png" alt="" />
+              </div>
+              <div class="floatLeft">
+                <p class="blueText">NEW COMMENT!</p>
+                <h5>
+                  <a href="#" >
+                    The Best French Restaurant in Chicago?
+                  </a>
+                </h5>
+                <p>
+                  by
+                  <a href="#" 
+                    ><span class="blueText hyperLinks">Jim Roy</span></a
+                  >
+                  | February 7, 2012
+                </p>
+                <p>
+                  From Topic Box:
+                  <a href="#" 
+                    ><span class="blueText hyperLinks"
+                      >Chicago Restaurants Reviews</span
+                    ></a
+                  >
+                </p>
+              </div>
+            </div>
+
+            <div class="post clearfix">
+              <div class="floatLeft">
+                <img src="./assets/JohnPeterMoise.png" alt="" />
+              </div>
+              <div class="floatLeft">
+                <h5>
+                  <a href="#" >
+                    The Meaning of Night, a Dark Book but incredibly well
+                    written
+                  </a>
+                </h5>
+                <p>
+                  by
+                  <a href="#" 
+                    ><span class="blueText hyperLinks">John Peter Moise</span></a
+                  >
+                  | February 7, 2012 |
+                  <span class="green-text">Subscribed</span>
+                </p>
+                <p>
+                  From Topic Box:
+                  <a href="#" 
+                    ><span class="blueText hyperLinks"
+                      >Books read & Books to Read</span
+                    ></a
+                  >
+                </p>
+              </div>
+            </div>
+
+            <div class="post clearfix">
+              <div class="floatLeft">
+                <img src="./assets/MarianneGig.png" alt="" />
+              </div>
+              <div class="floatLeft">
+                <p class="redText">TOPIC BOX INVITE!</p>
+                <h5>
+                  <a href="#" > Pea Pesto </a>
+                </h5>
+                <p>
+                  by
+                  <a href="#" 
+                    ><span class="blueText hyperLinks">Marianne Gig</span></a
+                  >
+                  | February 7, 2012
+                </p>
+                <p>
+                  From Topic Box:
+                  <a href="#" 
+                    ><span class="blueText hyperLinks">Favourite Recipies</span></a
+                  >
+                </p>
+              </div>
+            </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Side Bar -->
+        
+          <div class="rightmenubar floatRight">
+            <div class="sideMenuHeading">
+              <h2>Video Tutorials</h2>
+            </div>
+            <ul>
+              <li>
+                <a href="#" 
+                  >Overview of TuTangle</a
+                >
+              </li>
+              <li>
+                <a href="#" >Searching the Site</a>
+              </li>
+              <li>
+                <a href="#" 
+                  >Previous & Saved Searches</a
+                >
+              </li>
+              <li>
+                <a href="#" >The Topic Box Page</a>
+              </li>
+              <li>
+                <a href="#" 
+                  >Creating a Topic Box</a
+                >
+              </li>
+              <li>
+                <a href="#" 
+                  >View Topic Box Entries</a
+                >
+              </li>
+              <li>
+                <a href="#" >Creating an Entry</a>
+              </li>
+              <li><a href="#" >Privacy Settings</a></li>
+              <li><a href="#" >Co-Authoring</a></li>
+            </ul>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div class="container clearfix">
+        <div class="floatLeft">
+          <ul>
+            <li class="hyperLinks">
+              <a href="#" >About Us</a
+              >
+            </li>
+            <li class="hyperLinks">
+              <a href="#" >Contact Us</a
+              >
+            </li>
+            <li class="hyperLinks">
+              <a href="#" >Terms of Use</a
+              >
+            </li>
+            <li class="hyperLinks">
+              <a href="#" >Privacy Policy</a
+              >
+            </li>
+            <li class="hyperLinks"><a href="#" >Feedback</a></li>
+          </ul>
+        </div>
+        <div class="floatRight">&copy; TuTangle 2013</div>
+      </div>
+    </div>
+  </footer>
+</html>
