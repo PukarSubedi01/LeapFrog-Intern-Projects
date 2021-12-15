@@ -42,18 +42,11 @@ nav ul li {
   margin: 2px 0 0 14px;
 }
 
-.navMenu li {
-  margin: 0 24px 0 11px;
-}
-
 .navMenu li:hover {
   cursor: pointer;
 }
 .navRightContent {
   float: right;
-}
-.navRightContent li:last-child {
-  margin: 0 14px 0 0;
 }
 
 .navRightContent li:first-child {
@@ -67,6 +60,9 @@ nav ul li {
 .navRightContent span {
   position: relative;
   bottom: 2px;
+}
+.navRightContent li:hover {
+  cursor: pointer;
 }
 .main ul li {
   list-style: none;
