@@ -1,7 +1,15 @@
+@media only screen and (min-width: 359px) {
+  header {
+    height: 104px;
+  }
+  .search {
+    display: block;
+  }
+}
 @media only screen and (min-width: 600px) {
   .footerCopyright {
     float: right;
-    margin: 0 14px 0 0;
+    padding: 0 14px 0 0;
   }
   .footerMenu {
     float: left;
@@ -48,10 +56,7 @@
   .navMenu {
     display: block;
   }
-  .mainContent {
-    /* width: 518px; */
-    /* margin-left: 28px; */
-  }
+
   .rightmenubar {
     display: block;
   }
