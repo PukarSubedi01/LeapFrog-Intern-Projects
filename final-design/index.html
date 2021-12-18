@@ -1,0 +1,630 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Funiro- Furniture shop</title>
+    <link rel="stylesheet" href="./styles/reset.css" />
+    <link rel="stylesheet" href="./styles/header/layout.css" />
+    <link rel="stylesheet" href="./styles/header/style.css" />
+    <link rel="stylesheet" href="./styles/main/layout.css" />
+    <link rel="stylesheet" href="./styles/main/style.css" />
+    <link rel="stylesheet" href="./styles/main/tablet.css" />
+    <link rel="stylesheet" href="./styles/main/desktop.css" />
+    <link rel="stylesheet" href="./styles/footer/layout.css" />
+    <link rel="stylesheet" href="./styles/footer/style.css" />
+    <link rel="stylesheet" href="./styles/footer/tablet.css" />
+    <link rel="stylesheet" href="./styles/footer/desktop.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="headerNav clearfix">
+        <div class="mobileViewNav">
+          <div class="hamburgerContainer floatLeft">
+            <img src="./assets/icons/hamburger.png" alt="hamburger menu" />
+          </div>
+          <div class="searchIconContainer floatLeft">
+            <img src="./assets/icons/search.svg" alt="Search Icon" />
+          </div>
+        </div>
+        <div class="funiroLogo">
+          <h5>Funiro.</h5>
+        </div>
+
+        <div class="iconContainer floatRight clearfix">
+          <!-- <div class="heartIconContainer">
+            <img src="./assets/icons/Heart.png" alt="Heat Icon" />
+          </div> -->
+          <div class="cartIconContainer floatLeft">
+            <img src="./assets/icons/Cart.png" alt="Cart Icon" />
+          </div>
+          <div class="userIconContainer floatLeft">
+            <img src="./assets/icons/userIcon.png" alt="User Icon" />
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main class="main">
+      <section class="mainSlider clearfix">
+        <div class="sliderNavigation clearfix">
+          <div class="paginationIndicators clearfix floatLeft">
+            <div class="paginationBtn activePaginationBtn floatLeft"></div>
+            <div class="paginationBtn floatLeft"></div>
+            <div class="paginationBtn floatLeft"></div>
+            <div class="paginationBtn floatLeft"></div>
+          </div>
+          <div class="sliderButtons clearfix floatRight">
+            <div class="mainSliderBtn floatLeft"></div>
+            <div class="mainSliderBtn nextTip floatLeft"></div>
+          </div>
+        </div>
+        <div class="heroContentWrapper">
+          <div class="heroContent">
+            <h1>High-Quality Furniture Just For You</h1>
+            <p>
+              Our furniture is made from selected and best quality materials
+              that are suitable for your dream home
+            </p>
+            <button class="button shopNowBtn">Shop Now</button>
+          </div>
+        </div>
+      </section>
+      <section class="feature">
+        <ul class="featuresList clearfix">
+          <li>
+            <div class="featureIcon-Container floatLeft">
+              <img src="./assets/icons/trophy.png" alt="Trophy icon" />
+            </div>
+            <div class="featureItemContainer floatLeft">
+              <h6>High Quality</h6>
+              <p>crafted from top materials</p>
+            </div>
+          </li>
+          <li>
+            <div class="featureIcon-Container floatLeft">
+              <img src="./assets/icons/check.png" alt="Guarantee icon" />
+            </div>
+            <div class="featureItemContainer floatLeft">
+              <h6>Warranty Protection</h6>
+              <p>Over 2 years</p>
+            </div>
+          </li>
+          <li>
+            <div class="featureIcon-Container floatLeft">
+              <img src="./assets/icons/shipping.png" alt="Free shipping icon" />
+            </div>
+            <div class="featureItemContainer floatLeft">
+              <h6>Free Shipping</h6>
+              <p>Order over 150 $</p>
+            </div>
+          </li>
+          <li>
+            <div class="featureIcon-Container floatLeft">
+              <img
+                src="./assets/icons/customer-support.png"
+                alt="Customer support icon"
+              />
+            </div>
+            <div class="featureItemContainer floatLeft">
+              <h6>27 / 7 Support</h6>
+              <p>Dedicated support</p>
+            </div>
+          </li>
+        </ul>
+      </section>
+      <section class="products">
+        <h2>Our Products</h2>
+        <div class="productWrapper clearfix">
+          <div class="productrow1">
+            <div class="productItem clearfix">
+              <div class="productItemImage">
+                <img src="./assets/images/Slytherine.png" alt="Slytherine" />
+              </div>
+              <div class="productDesc-container">
+                <div class="productTitle">Syltherine</div>
+                <p class="productDesc">Stylish cafe chair</p>
+                <p class="productPrice floatLeft">Rp 2.500.000</p>
+                <p class="productPrice products__price_old floatRight">
+                  Rp 3.500.000
+                </p>
+              </div>
+              <div class="discountContainer redElipse">
+                <p>-30%</p>
+              </div>
+              <div class="productOverlay">
+                <div class="overLayContent">
+                  <button class="overlayButton">Add to cart</button>
+                  <div class="shareLikeWrapper">
+                    <div class="share floatLeft">
+                      <div class="floatLeft">
+                        <img
+                          src="./assets/icons/gridicons_share.svg"
+                          alt="share icon"
+                        />
+                      </div>
+
+                      <span>Share</span>
+                    </div>
+                    <div class="like floatRight">
+                      <div class="floatLeft">
+                        <img src="./assets/icons/Heart.svg" alt="Heart icon" />
+                      </div>
+                      <span>Like</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="productItem clearfix">
+              <div class="productItemImage">
+                <img src="./assets/images/Leviosa.jpg" alt="Leviosa" />
+              </div>
+              <div class="productDesc-container">
+                <div class="productTitle">Leviosa</div>
+                <p class="productDesc">Stylish cafe chair</p>
+                <p class="productPrice floatLeft">Rp 2.500.000</p>
+                <p class="productPrice products__price_old hidden floatRight">
+                  Rp 3.500.000
+                </p>
+              </div>
+              <div class="discountContainer redElipse hidden">
+                <p>-30%</p>
+              </div>
+              <div class="productOverlay">
+                <div class="overLayContent">
+                  <button class="overlayButton">Add to cart</button>
+                  <div class="shareLikeWrapper">
+                    <div class="share floatLeft">
+                      <div class="floatLeft">
+                        <img
+                          src="./assets/icons/gridicons_share.svg"
+                          alt="share icon"
+                        />
+                      </div>
+
+                      <span>Share</span>
+                    </div>
+                    <div class="like floatRight">
+                      <div class="floatLeft">
+                        <img src="./assets/icons/Heart.svg" alt="Heart icon" />
+                      </div>
+                      <span>Like</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="productItem clearfix">
+              <div class="productItemImage">
+                <img src="./assets/images/Lolito.png" alt="Lolito" />
+              </div>
+              <div class="productDesc-container">
+                <div class="productTitle">Lolito</div>
+                <p class="productDesc">Luxury big sofa</p>
+                <p class="productPrice floatLeft">Rp 7.000.000</p>
+                <p class="productPrice products__price_old floatRight">
+                  Rp 14.000.000
+                </p>
+              </div>
+              <div class="discountContainer redElipse">
+                <p>-50%</p>
+              </div>
+              <div class="productOverlay">
+                <div class="overLayContent">
+                  <button class="overlayButton">Add to cart</button>
+                  <div class="shareLikeWrapper">
+                    <div class="share floatLeft">
+                      <div class="floatLeft">
+                        <img
+                          src="./assets/icons/gridicons_share.svg"
+                          alt="share icon"
+                        />
+                      </div>
+
+                      <span>Share</span>
+                    </div>
+                    <div class="like floatRight">
+                      <div class="floatLeft">
+                        <img src="./assets/icons/Heart.svg" alt="Heart icon" />
+                      </div>
+                      <span>Like</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="productItem clearfix">
+              <div class="productItemImage">
+                <img src="./assets/images/Respira.png" alt="Respira" />
+              </div>
+              <div class="productDesc-container">
+                <div class="productTitle">Respira</div>
+                <p class="productDesc">Minimalist fan</p>
+                <p class="productPrice floatLeft">Rp 500.000</p>
+                <p class="productPrice products__price_old hidden floatRight">
+                  Rp 3.500.000
+                </p>
+              </div>
+              <div class="discountContainer greenElipse">
+                <p>New</p>
+              </div>
+              <div class="productOverlay">
+                <div class="overLayContent">
+                  <button class="overlayButton">Add to cart</button>
+                  <div class="shareLikeWrapper">
+                    <div class="share floatLeft">
+                      <div class="floatLeft">
+                        <img
+                          src="./assets/icons/gridicons_share.svg"
+                          alt="share icon"
+                        />
+                      </div>
+
+                      <span>Share</span>
+                    </div>
+                    <div class="like floatRight">
+                      <div class="floatLeft">
+                        <img src="./assets/icons/Heart.svg" alt="Heart icon" />
+                      </div>
+                      <span>Like</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="productrow2">
+            <div class="productItem clearfix">
+              <div class="productItemImage">
+                <img src="./assets/images/Grifo.png" alt="Grifo" />
+              </div>
+              <div class="productDesc-container">
+                <div class="productTitle">Grifo</div>
+                <p class="productDesc">Night lamp</p>
+                <p class="productPrice floatLeft">Rp 1.500.000</p>
+                <p class="productPrice products__price_old hidden floatRight">
+                  Rp 3.500.000
+                </p>
+              </div>
+              <div class="discountContainer redElipse hidden">
+                <p>-30%</p>
+              </div>
+              <div class="productOverlay">
+                <div class="overLayContent">
+                  <button class="overlayButton">Add to cart</button>
+                  <div class="shareLikeWrapper">
+                    <div class="share floatLeft">
+                      <div class="floatLeft">
+                        <img
+                          src="./assets/icons/gridicons_share.svg"
+                          alt="share icon"
+                        />
+                      </div>
+
+                      <span>Share</span>
+                    </div>
+                    <div class="like floatRight">
+                      <div class="floatLeft">
+                        <img src="./assets/icons/Heart.svg" alt="Heart icon" />
+                      </div>
+                      <span>Like</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="productItem clearfix">
+              <div class="productItemImage">
+                <img src="./assets/images/Muggo.png" alt="Muggo" />
+              </div>
+              <div class="productDesc-container">
+                <div class="productTitle">Muggo</div>
+                <p class="productDesc">Small mug</p>
+                <p class="productPrice floatLeft">Rp 150.000</p>
+                <p class="productPrice products__price_old hidden floatRight">
+                  Rp 3.500.000
+                </p>
+              </div>
+              <div class="discountContainer greenElipse">
+                <p>New</p>
+              </div>
+              <div class="productOverlay">
+                <div class="overLayContent">
+                  <button class="overlayButton">Add to cart</button>
+                  <div class="shareLikeWrapper">
+                    <div class="share floatLeft">
+                      <div class="floatLeft">
+                        <img
+                          src="./assets/icons/gridicons_share.svg"
+                          alt="share icon"
+                        />
+                      </div>
+
+                      <span>Share</span>
+                    </div>
+                    <div class="like floatRight">
+                      <div class="floatLeft">
+                        <img src="./assets/icons/Heart.svg" alt="Heart icon" />
+                      </div>
+                      <span>Like</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="productItem clearfix">
+              <div class="productItemImage">
+                <img src="./assets/images/Pingky.png" alt="Pingky" />
+              </div>
+              <div class="productDesc-container">
+                <div class="productTitle">Pingky</div>
+                <p class="productDesc">Cute bed set</p>
+                <p class="productPrice floatLeft">Rp 7.000.00</p>
+                <p class="productPrice products__price_old floatRight">
+                  Rp 14.00.0000
+                </p>
+              </div>
+              <div class="discountContainer redElipse">
+                <p>-50%</p>
+              </div>
+              <div class="productOverlay">
+                <div class="overLayContent">
+                  <button class="overlayButton">Add to cart</button>
+                  <div class="shareLikeWrapper">
+                    <div class="share floatLeft">
+                      <div class="floatLeft">
+                        <img
+                          src="./assets/icons/gridicons_share.svg"
+                          alt="share icon"
+                        />
+                      </div>
+
+                      <span>Share</span>
+                    </div>
+                    <div class="like floatRight">
+                      <div class="floatLeft">
+                        <img src="./assets/icons/Heart.svg" alt="Heart icon" />
+                      </div>
+                      <span>Like</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="productItem clearfix">
+              <div class="productItemImage">
+                <img src="./assets/images/Potty.png" alt="Potty" />
+              </div>
+              <div class="productDesc-container">
+                <div class="productTitle">Potty</div>
+                <p class="productDesc">Minimalist flower plot</p>
+                <p class="productPrice floatLeft">Rp 500.00</p>
+                <p class="productPrice products__price_old hidden floatRight">
+                  Rp 3.500.000
+                </p>
+              </div>
+              <div class="discountContainer greenElipse">
+                <p>New</p>
+              </div>
+              <div class="productOverlay">
+                <div class="overLayContent">
+                  <button class="overlayButton">Add to cart</button>
+                  <div class="shareLikeWrapper">
+                    <div class="share floatLeft">
+                      <div class="floatLeft">
+                        <img
+                          src="./assets/icons/gridicons_share.svg"
+                          alt="share icon"
+                        />
+                      </div>
+
+                      <span>Share</span>
+                    </div>
+                    <div class="like floatRight">
+                      <div class="floatLeft">
+                        <img src="./assets/icons/Heart.svg" alt="Heart icon" />
+                      </div>
+                      <span>Like</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button class="showMore">Show More</button>
+      </section>
+      <section class="inspiration">
+        <div class="inspirationWrapper">
+          <article class="leftArticle">
+            <div class="leftContent">
+              <h2>50+ Beautiful rooms inspiration</h2>
+              <p>
+                Our designer already made a lot of beautiful prototipe of rooms
+                that inspire you
+              </p>
+              <button class="exploreBtn button">Explore More</button>
+            </div>
+            <div class="rightContent"></div>
+          </article>
+        </div>
+      </section>
+      <section class="tips">
+        <h2>Tips & Tricks</h2>
+        <div class="tipsCarouselWrapper clearfix">
+          <div class="tipsItem floatLeft">
+            <div class="tipsImage">
+              <img
+                src="./assets/images/roomToLove.png"
+                alt="Living room to love"
+              />
+            </div>
+            <div class="tipsDescContainer">
+              <div class="tipsTitle">How to create a living room to love</div>
+              <p class="tipsDesc">20 jan 2020</p>
+            </div>
+          </div>
+          <div class="tipsItem activeTipItem floatLeft">
+            <div class="tipsImage">
+              <img
+                src="./assets/images/cleanWorkingSpace.png"
+                alt="Clean looking work space"
+              />
+            </div>
+            <div class="tipsDescContainer">
+              <div class="tipsTitle">Solution for clean look working space</div>
+              <p class="tipsDesc">10 jan 2020</p>
+            </div>
+          </div>
+          <div class="tipsItem floatLeft">
+            <div class="tipsImage">
+              <img
+                src="./assets/images/cookingActivity.png"
+                alt="Cooking activity with good setup"
+              />
+            </div>
+            <div class="tipsDescContainer">
+              <div class="tipsTitle">
+                Make your cooking activity more fun with good setup
+              </div>
+              <p class="tipsDesc">20 jan 2020</p>
+            </div>
+          </div>
+        </div>
+        <div class="tipsBtn previousTip"></div>
+        <div class="tipsBtn nextTip"></div>
+        <div class="tipsPagination">
+          <div class="paginationBtn floatLeft"></div>
+          <div class="activePaginationBtn floatLeft"></div>
+          <div class="paginationBtn floatLeft"></div>
+          <div class="paginationBtn floatLeft"></div>
+        </div>
+      </section>
+      <section class="furnitureWrapper">
+        <div class="furnitureContainer">
+          <div class="furnitureHeading">
+            <div class="furnitureTitle">Share your setup with</div>
+            <h2 class="furnitureHashtag">#FuniroFurniture</h2>
+          </div>
+          <div class="furnitureContent clearfix">
+            <!-- Image Block 1 -->
+            <div class="block-1">
+              <div class="subblock-1 clearfix">
+                <div class="furnitureImage1 floatLeft">
+                  <img
+                    src="./assets/images/furnitures/furniture1.png"
+                    alt="furniture"
+                  />
+                </div>
+                <div class="furnitureImage2 floatRight">
+                  <img
+                    src="./assets/images/furnitures/furniture2.png"
+                    alt="furniture"
+                  />
+                </div>
+              </div>
+              <div class="subblock-2 clearfix">
+                <div class="furnitureImage3 floatLeft">
+                  <img
+                    src="./assets/images/furnitures/furniture3.png"
+                    alt="furniture"
+                  />
+                </div>
+                <div class="furnitureImage4 floatRight">
+                  <img
+                    src="./assets/images/furnitures/furniture4.png"
+                    alt="furniture"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <!-- Image Block 2 -->
+            <div class="block-2">
+              <div class="furnitureImage5">
+                <img
+                  src="./assets/images/furnitures/furniture5.png"
+                  alt="furniture"
+                />
+              </div>
+            </div>
+
+            <!-- Image Block 3 -->
+            <div class="block-3">
+              <div class="subblock-1 clearfix">
+                <div class="furnitureImage6 floatLeft">
+                  <img
+                    src="./assets/images/furnitures/furniture6.png"
+                    alt="furniture"
+                  />
+                </div>
+                <div class="furnitureImage7 floatRight">
+                  <img
+                    src="./assets/images/furnitures/furniture7.png"
+                    alt="furniture"
+                  />
+                </div>
+              </div>
+              <div class="subblock-2 clearfix">
+                <div class="furnitureImage8 floatLeft">
+                  <img
+                    src="./assets/images/furnitures/furniture8.png"
+                    alt="furniture"
+                  />
+                </div>
+                <div class="furnitureImage9 floatRight">
+                  <img
+                    src="./assets/images/furnitures/furniture9.png"
+                    alt="furniture"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="footerContentWrapper">
+        <div class="footerContent">
+          <h5>Funiro</h5>
+          <ul class="footerContentsList">
+            <li>
+              Worldwide furniture store since 2020. We sell over 1000+ branded
+              products on our website
+            </li>
+            <li>Sawojajar Malang, Indonesia</li>
+            <li>+6289 456 3455</li>
+            <li>www.funiro.com</li>
+          </ul>
+        </div>
+        <div class="footerContent">
+          <h5>Menu</h5>
+          <ul class="footerContentsList">
+            <li>Products</li>
+            <li>Rooms</li>
+            <li>Inspirations</li>
+            <li>Terms & Policy</li>
+          </ul>
+        </div>
+        <div class="footerContent">
+          <h5>Account</h5>
+          <ul class="footerContentsList">
+            <li>My Account</li>
+            <li>Checkout</li>
+            <li>My Cart</li>
+            <li>My catalog</li>
+          </ul>
+        </div>
+        <div class="footerContent">
+          <h5>Stay Connected</h5>
+          <ul class="footerContentsList">
+            <li>Facebook</li>
+            <li>Instagram</li>
+            <li>Twitter</li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

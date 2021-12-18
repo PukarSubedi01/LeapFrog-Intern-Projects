@@ -1,0 +1,13 @@
+.footerContentWrapper h5 {
+  font-weight: 700;
+}
+.footerContentsList li {
+  list-style: none;
+  font-size: 16px;
+  line-height: 150%;
+  color: #616161;
+  padding-top: 16px;
+}
+.footerContentsList li:hover {
+  cursor: pointer;
+}

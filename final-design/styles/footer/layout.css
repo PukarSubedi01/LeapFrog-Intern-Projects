@@ -1,0 +1,10 @@
+.footer {
+  padding: 50px 7.08%;
+}
+.footerContentWrapper {
+  /* width: 100%; */
+  border-top: 1px solid black;
+}
+.footerContent {
+  padding-top: 30px;
+}

@@ -1,0 +1,25 @@
+@media only screen and (min-width: 550px) {
+  .tipsCarouselWrapper {
+    width: 950px;
+    transform: translate3d(-20.77%, 0px, 0px);
+
+    /* overflow: hidden; */
+  }
+}
+@media only screen and (min-width: 961px) {
+  .productItem {
+    width: 25%;
+    float: left;
+    margin: 2.083% 4%;
+  }
+  /* .feature {
+    display: block;
+  } */
+
+  .tipsCarouselWrapper {
+    width: 950px;
+    transform: translate3d(2%, 0px, 0px);
+    margin: 0 auto;
+    /* overflow: hidden; */
+  }
+}

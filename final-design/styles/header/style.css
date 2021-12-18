@@ -1,0 +1,37 @@
+.headerNav {
+  padding: 40px 10px;
+}
+.funiroLogo {
+  position: absolute;
+  left: 42%;
+}
+.mobileViewNav div {
+  padding: 0 5px;
+}
+.hamburgerContainer {
+  width: 24px;
+}
+.hamburgerContainer img {
+  width: 100%;
+}
+.searchIconContainer {
+  width: 24px;
+}
+.searchIconContainer img {
+  width: 100%;
+}
+.cartIconContainer {
+  width: 24px;
+}
+.cartIconContainer img {
+  width: 100%;
+}
+.userIconContainer {
+  width: 24px;
+}
+.userIconContainer img {
+  width: 100%;
+}
+.iconContainer div {
+  padding: 0 10px 0 0;
+}

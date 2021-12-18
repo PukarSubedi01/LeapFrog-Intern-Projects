@@ -1,0 +1,20 @@
+@media only screen and (min-width: 1440px) {
+  .productItem {
+    width: 18%;
+    float: left;
+    margin: 32px 36px;
+  }
+
+  .productrow2,
+  .productrow1 {
+    float: left;
+    width: 100%;
+  }
+
+  .productWrapper {
+    padding-left: 100px;
+  }
+  .showMore {
+    width: 245px;
+  }
+}
