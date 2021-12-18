@@ -11,3 +11,21 @@
 .footerContentsList li:hover {
   cursor: pointer;
 }
+.subscriptionInput input {
+  background: #f4f5f7;
+  width: 144px;
+  padding: 13px;
+  border: hidden;
+}
+.update-button {
+  border: none;
+  background-color: #e89f71;
+  padding: 10px;
+}
+.update-button img {
+  width: 24px;
+}
+
+.subscriptionWrapper {
+  margin-top: 16px;
+}

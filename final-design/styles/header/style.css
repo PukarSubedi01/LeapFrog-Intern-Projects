@@ -5,33 +5,57 @@
   position: absolute;
   left: 42%;
 }
+.funiroLogo:hover {
+  cursor: pointer;
+}
+.funiroLogo h5 {
+  font-size: 24px;
+  font-weight: 700;
+  color: black;
+}
 .mobileViewNav div {
   padding: 0 5px;
+}
+.iconContainer div:hover {
+  cursor: pointer;
 }
 .hamburgerContainer {
   width: 24px;
 }
-.hamburgerContainer img {
-  width: 100%;
-}
 .searchIconContainer {
   width: 24px;
 }
-.searchIconContainer img {
-  width: 100%;
+.heartIconContainer {
+  width: 24px;
 }
 .cartIconContainer {
   width: 24px;
 }
-.cartIconContainer img {
-  width: 100%;
-}
+
 .userIconContainer {
   width: 24px;
 }
-.userIconContainer img {
-  width: 100%;
-}
+
 .iconContainer div {
   padding: 0 10px 0 0;
+}
+.navMenu {
+  display: none;
+}
+.search-bar {
+  display: none;
+  padding: 5px 0;
+  background-color: #ffffff;
+  padding-left: 12px;
+}
+.search-bar input {
+  width: 80%;
+  border: hidden;
+}
+
+.search-icon {
+  border: 0;
+  background-color: #ffffff;
+  display: inline-block;
+  vertical-align: middle;
 }

@@ -7,20 +7,17 @@ img {
 }
 .mainSlider {
   background: linear-gradient(90deg, #f9f1e7 67%, #fcf8f3 0);
+  position: relative;
   width: 100%;
 }
-/* .feature {
-  width: 100%;
-  margin: 88px 0;
-  padding-left: 100px;
-  box-sizing: border-box;
-} */
+
 .feature {
   display: none;
 }
 .products {
   width: 100%;
   text-align: center;
+  margin-top: 88px;
 }
 .redElipse {
   width: 48px;
@@ -47,6 +44,7 @@ img {
 }
 .productOverlay:hover {
   background-color: rgba(0, 0, 0, 0.8);
+  cursor: pointer;
 }
 .productOverlay:hover > .overLayContent {
   display: block;

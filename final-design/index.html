@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="./styles/reset.css" />
     <link rel="stylesheet" href="./styles/header/layout.css" />
     <link rel="stylesheet" href="./styles/header/style.css" />
+    <link rel="stylesheet" href="./styles/header/tablet.css" />
     <link rel="stylesheet" href="./styles/main/layout.css" />
     <link rel="stylesheet" href="./styles/main/style.css" />
     <link rel="stylesheet" href="./styles/main/tablet.css" />
@@ -30,11 +31,45 @@
         <div class="funiroLogo">
           <h5>Funiro.</h5>
         </div>
-
+        <nav class="navMenu floatLeft">
+          <ul>
+            <li class="menu-items">
+              <a href="">Products</a>
+              <div class="drop-down">
+                <img src="./assets/icons/arrow-down.png" alt="arrow-down" />
+              </div>
+            </li>
+            <li class="menu-items">
+              <a href="">Rooms</a>
+              <div class="drop-down">
+                <img src="./assets/icons/arrow-down.png" alt="arrow-down" />
+              </div>
+            </li>
+            <li class="menu-items">
+              <a href="">Inspirations</a>
+              <div class="drop-down">
+                <img src="./assets/icons/arrow-down.png" alt="arrow-down" />
+              </div>
+            </li>
+          </ul>
+        </nav>
+        <div class="search-bar">
+          <button class="search-icon">
+            <img
+              class="bottom-align"
+              src="./assets/icons/search.svg"
+              alt="search-icon"
+            />
+          </button>
+          <input type="text" placeholder="Search for minimalist chair" />
+        </div>
         <div class="iconContainer floatRight clearfix">
-          <!-- <div class="heartIconContainer">
+          <div class="searchIconContainer hidden floatLeft">
+            <img src="./assets/icons/search.svg" alt="Search Icon" />
+          </div>
+          <div class="heartIconContainer floatLeft">
             <img src="./assets/icons/Heart.png" alt="Heat Icon" />
-          </div> -->
+          </div>
           <div class="cartIconContainer floatLeft">
             <img src="./assets/icons/Cart.png" alt="Cart Icon" />
           </div>
@@ -46,18 +81,6 @@
     </header>
     <main class="main">
       <section class="mainSlider clearfix">
-        <div class="sliderNavigation clearfix">
-          <div class="paginationIndicators clearfix floatLeft">
-            <div class="paginationBtn activePaginationBtn floatLeft"></div>
-            <div class="paginationBtn floatLeft"></div>
-            <div class="paginationBtn floatLeft"></div>
-            <div class="paginationBtn floatLeft"></div>
-          </div>
-          <div class="sliderButtons clearfix floatRight">
-            <div class="mainSliderBtn floatLeft"></div>
-            <div class="mainSliderBtn nextTip floatLeft"></div>
-          </div>
-        </div>
         <div class="heroContentWrapper">
           <div class="heroContent">
             <h1>High-Quality Furniture Just For You</h1>
@@ -66,6 +89,46 @@
               that are suitable for your dream home
             </p>
             <button class="button shopNowBtn">Shop Now</button>
+          </div>
+        </div>
+        <div class="sliderNavigation floatRight clearfix">
+          <div class="paginationIndicators clearfix floatLeft">
+            <div class="paginationBtn activePaginationBtn floatLeft"></div>
+            <div class="paginationBtn floatLeft"></div>
+            <div class="paginationBtn floatLeft"></div>
+            <div class="paginationBtn floatLeft"></div>
+          </div>
+          <div class="sliderButtons clearfix floatLeft">
+            <div class="mainSliderBtn floatLeft"></div>
+            <div class="mainSliderBtn nextTip floatLeft"></div>
+          </div>
+        </div>
+
+        <div class="mainImageCarouselWrapper clearfix">
+          <div class="imageCarouselContent">
+            <div class="mainCarouselItem floatLeft">
+              <img src="./assets/images/Image1.png" alt="Carousel Image 1" />
+            </div>
+            <div class="mainCarouselItem floatLeft">
+              <img src="./assets/images/Image2.png" alt="Carousel Image 2" />
+            </div>
+            <div class="mainCarouselItem floatLeft">
+              <img src="./assets/images/Image3.png" alt="Carousel Image 3" />
+            </div>
+          </div>
+        </div>
+        <div class="sofa-overlay">
+          <div class="sofa-overlay-block1">
+            <div class="sofa-text">
+              <span class="sofa-text1">Bohauss</span>
+            </div>
+            <div class="sofa-text">
+              <span class="sofa-text-2">Luxury big sofa 2-seat</span>
+            </div>
+            <span class="sofa-text-3">Rp 17.000.000</span>
+            <div class="arrowRight floatRight">
+              <img src="./assets/icons/arrow right.png" alt="right arrow" />
+            </div>
           </div>
         </div>
       </section>
@@ -435,7 +498,7 @@
         <button class="showMore">Show More</button>
       </section>
       <section class="inspiration">
-        <div class="inspirationWrapper">
+        <div class="inspirationWrapper clearfix">
           <article class="leftArticle">
             <div class="leftContent">
               <h2>50+ Beautiful rooms inspiration</h2>
@@ -445,8 +508,45 @@
               </p>
               <button class="exploreBtn button">Explore More</button>
             </div>
-            <div class="rightContent"></div>
           </article>
+          <article class="rightArticle floatLeft">
+            <div class="inspirationCarouselWrapper">
+              <div class="inspirationCarouselContent">
+                <div class="inspirationCarouselItem floatLeft">
+                  <img
+                    src="./assets/images/inspirations/inspiration1.png"
+                    alt="Carousel Image 1"
+                  />
+                </div>
+                <div class="inspirationCarouselItem floatLeft">
+                  <img
+                    src="./assets/images/inspirations/inspiration2.png"
+                    alt="Carousel Image 2"
+                  />
+                </div>
+                <div class="inspirationCarouselItem floatLeft">
+                  <img
+                    src="./assets/images/inspirations/inspiration3.png"
+                    alt="Carousel Image 3"
+                  />
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+        <div class="room-overlay">
+          <div class="room-overlay-block1">
+            <div class="room-text">
+              <span class="room-text1">01--</span>
+              <span class="room-text-3">Bedroom</span>
+            </div>
+            <h2 class="room-overlay-title">Inner Peace</h2>
+          </div>
+          <div class="room-overlay-block2">
+            <button class="room-overlay-button">
+              <img src="./assets/icons/Right 16px.png" alt="room-arrow" />
+            </button>
+          </div>
         </div>
       </section>
       <section class="tips">
@@ -623,6 +723,19 @@
             <li>Instagram</li>
             <li>Twitter</li>
           </ul>
+        </div>
+        <div class="footerContent">
+          <h5>Stay Updated</h5>
+          <div class="subscriptionWrapper">
+            <div class="subscriptionInput floatLeft">
+              <input type="text" placeholder="Enter your email" />
+            </div>
+            <div class="subscriptionBtn">
+              <button class="update-button">
+                <img src="./assets/icons/send.png" alt="Send icon" />
+              </button>
+            </div>
+          </div>
         </div>
       </div>
     </footer>

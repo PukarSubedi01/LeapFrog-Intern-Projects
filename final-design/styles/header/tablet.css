@@ -1,0 +1,48 @@
+@media only screen and (min-width: 768px) {
+  .mobileViewNav {
+    display: none;
+  }
+  .funiroLogo {
+    position: static;
+    float: left;
+  }
+  .headerNav {
+    padding: 40px 14px 40px 40px;
+  }
+  .userIconContainer {
+    width: 40px;
+  }
+  .navMenu {
+    display: block;
+    padding-top: 4px;
+  }
+  .menu-items {
+    list-style: none;
+    display: inline-block;
+    margin-left: 41px;
+  }
+  .menu-items a {
+    text-decoration: none;
+    color: #616161;
+  }
+  .drop-down {
+    width: 20px;
+    display: inline-block;
+    border: 0;
+    padding-left: 2px;
+    vertical-align: bottom;
+  }
+  .heartIconContainer {
+    margin-top: 4px;
+  }
+  .cartIconContainer {
+    margin-top: 4px;
+  }
+  .iconContainer div {
+    padding: 0 20px 0 0;
+  }
+  .searchIconContainer {
+    margin-top: 4px;
+    display: block;
+  }
+}

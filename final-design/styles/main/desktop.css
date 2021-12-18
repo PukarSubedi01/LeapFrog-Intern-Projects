@@ -1,10 +1,29 @@
+@media only screen and (min-width: 1121px) {
+  .leftArticle {
+    width: 500;
+  }
+  .leftArticle h2 {
+    font-size: 40px;
+  }
+  .leftArticle p {
+    font-size: 16px;
+  }
+}
 @media only screen and (min-width: 1440px) {
   .productItem {
     width: 18%;
     float: left;
     margin: 32px 36px;
   }
-
+  .search-bar {
+    display: block;
+    float: left;
+    width: 33%;
+    margin-left: 11%;
+  }
+  .searchIconContainer {
+    display: none;
+  }
   .productrow2,
   .productrow1 {
     float: left;
@@ -16,5 +35,38 @@
   }
   .showMore {
     width: 245px;
+  }
+  .imageCarouselContent {
+    width: 4155px;
+  }
+  .paginationIndicators {
+    margin-right: 500px;
+  }
+  .heroContentWrapper {
+    width: 494px;
+  }
+  .heroContent h1 {
+    font-size: 56px;
+  }
+  .heroContent p {
+    font-size: 20px;
+  }
+  .featuresList li p {
+    font-size: 16px;
+  }
+  .featuresList li h6 {
+    font-size: 18px;
+  }
+  .featureIcon-Container {
+    margin-right: 24px;
+    width: 40px;
+  }
+  .inspirationCarouselContent {
+    width: 1500px;
+    transform: translate3d(0, 0px, 0px);
+  }
+  .inspirationCarouselItem {
+    width: 25%;
+    margin: 15px;
   }
 }

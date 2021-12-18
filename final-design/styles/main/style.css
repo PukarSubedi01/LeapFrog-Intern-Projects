@@ -1,7 +1,3 @@
-.mainSlider {
-  background: linear-gradient(90deg, #f9f1e7 67%, #fcf8f3 0);
-}
-
 .mainSliderBtn {
   margin: 0 10px;
   box-shadow: 0 0 10px 0 rgb(34 60 80 / 30%);
@@ -18,17 +14,28 @@
   width: 48px;
   z-index: 999;
 }
+.mainSliderBtn:hover {
+  cursor: pointer;
+}
 .paginationIndicators {
-  margin: 10px 0 0 20%;
+  margin: 10px 0 0 0;
+}
+.paginationBtn:hover {
+  cursor: pointer;
 }
 .sliderNavigation {
   position: relative;
+  margin-right: 10px;
 }
 .heroContentWrapper {
   width: 80%;
   background: rgba(255, 255, 255, 0.72);
   padding: 12.14%;
-  /* position: absolute; */
+  position: absolute;
+  top: 50px;
+  z-index: 1;
+  backdrop-filter: blur(5px);
+  left: 5%;
   box-sizing: border-box;
 }
 .heroContent h1 {
@@ -45,13 +52,33 @@
   font-size: 20px;
   font-weight: 600;
 }
-/* .featuresList {
+.shopNowBtn:hover {
+  cursor: pointer;
+}
+.mainImageCarouselWrapper {
   width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+.imageCarouselContent {
+  width: 2802px;
+  transform: translate3d(-26.77%, 0px, 0px);
+}
+.mainCarouselItem {
+  width: 28.8%;
+  margin: 10px;
+}
+.sofa-overlay {
+  display: none;
+}
+.featuresList {
+  width: 100%;
+  padding-left: 7.421%;
 }
 .featuresList li {
   float: left;
   list-style: none;
-  margin-right: 6.38%;
+  margin-right: 3.38%;
 }
 .featureItemContainer p {
   font-size: 16px;
@@ -59,10 +86,10 @@
   font-family: gilroy;
   font-weight: 500;
   line-height: 24px;
-}f
-.featureIcon-Container img {
+}
+f .featureIcon-Container img {
   margin-right: 24px;
-} */
+}
 
 .productDesc-Container {
   text-align: left;
@@ -205,14 +232,17 @@
   color: #616161;
   padding: 10px;
 }
+.rightArticle {
+  display: none;
+}
 .rightContent {
   display: none;
 }
 /* ----------------------- */
 
 .tipsCarouselWrapper {
-  width: 1024px;
-  transform: translate3d(-32.77%, 0px, 0px);
+  width: 300%;
+  transform: translate3d(-33.5%, 0px, 0px);
 
   /* overflow: hidden; */
 }
@@ -239,6 +269,9 @@
   margin: 2%;
 
   /* float: left; */
+}
+.tipsItem:hover {
+  cursor: pointer;
 }
 .tipsImage img {
   width: 100%;
@@ -275,7 +308,10 @@
   z-index: 999;
 }
 .previousTip {
-  left: 5%;
+  left: 2%;
+}
+.room-overlay {
+  display: none;
 }
 .nextTip {
   right: 2%;
