@@ -1,0 +1,49 @@
+#carousel-container {
+  width: 400px;
+  left: 30%;
+  top: 25%;
+  overflow: hidden;
+  position: relative;
+}
+#carousel-image-wrapper {
+  position: relative;
+}
+#carousel-image-wrapper img {
+  position: absolute;
+  width: 400px;
+  height: 400px;
+}
+#left-button,
+#right-button {
+  position: absolute;
+  width: 40px;
+  top: 45%;
+  cursor: pointer;
+}
+#right-button {
+  right: 0;
+}
+#left-button {
+  transform: rotate(180deg);
+}
+#carousel-navigation-btns {
+  width: fit-content;
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 0;
+  margin: 0;
+}
+#carousel-navigation-btns .carousel-dot {
+  height: 12px;
+  width: 12px;
+  margin-right: 10px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  display: inline-block;
+  cursor: pointer;
+}
+#carousel-navigation-btns .carousel-dot.selected {
+  background-color: rgba(255, 255, 255, 0.9);
+}
