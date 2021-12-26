@@ -44,8 +44,8 @@ function activeDot() {
 }
 
 function slide() {
-  const animation = window.requestAnimationFrame(slide);
-  console.log(position, SPEED);
+  let animation = window.requestAnimationFrame(slide);
+  // console.log(position, SPEED);
 
   if (position === -(currentIndex * imageWidth)) {
     window.cancelAnimationFrame(animation);

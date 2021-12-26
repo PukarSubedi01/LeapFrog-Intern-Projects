@@ -1,31 +1,30 @@
-#carousel-container {
-  width: 400px;
+.carousel-container {
   margin: 0 auto;
   overflow: hidden;
   position: relative;
+  margin-bottom: 25px;
 }
-#carousel-image-wrapper {
+
+.carousel-image-wrapper {
   position: relative;
 }
-#carousel-image-wrapper img {
+.carousel-image-wrapper img {
   position: absolute;
-  width: 400px;
-  height: 400px;
 }
-#left-button,
-#right-button {
+.left-button,
+.right-button {
   position: absolute;
   width: 40px;
   top: 45%;
   cursor: pointer;
 }
-#right-button {
+.right-button {
   right: 0;
 }
-#left-button {
+.left-button {
   transform: rotate(180deg);
 }
-#carousel-navigation-btns {
+.carousel-navigation-btns {
   width: fit-content;
   position: absolute;
   bottom: 20px;
@@ -34,7 +33,7 @@
   padding: 0;
   margin: 0;
 }
-#carousel-navigation-btns .carousel-dot {
+.carousel-navigation-btns .carousel-dot {
   height: 12px;
   width: 12px;
   margin-right: 10px;
@@ -43,6 +42,6 @@
   display: inline-block;
   cursor: pointer;
 }
-#carousel-navigation-btns .carousel-dot.selected {
+.carousel-navigation-btns .carousel-dot.selected {
   background-color: rgba(255, 255, 255, 0.9);
 }
