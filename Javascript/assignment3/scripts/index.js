@@ -33,5 +33,5 @@ const animateBalls = () => {
   balls.forEach((ball) => ball.movement());
 };
 
-init(1000);
+init(100);
 animateBalls();
