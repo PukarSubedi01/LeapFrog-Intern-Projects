@@ -1,0 +1,32 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Car Lane Game</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="game-wrapper">
+      <div class="home-screen">
+        <img src="./assets/poster.jpg" alt="Game Poster" />
+        <button id="play-game">Play Now</button>
+      </div>
+      <canvas></canvas>
+      <div class="game-over-screen">
+        <div class="message-wrapper">
+          <p class="game-over-head">GAME OVER!</p>
+          <p class="your-score-title">Your Score</p>
+          <p class="score">15</p>
+          <p class="message">Better Luck Next Time</p>
+          <button class="restart-game">Restart Game</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="scripts/utils.js"></script>
+    <script src="scripts/obstacles.js"></script>
+    <script src="scripts/carLaneGame.js"></script>
+    <script src="scripts/index.js"></script>
+  </body>
+</html>
