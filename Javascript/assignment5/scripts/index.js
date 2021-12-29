@@ -153,6 +153,8 @@ restartBtn.addEventListener("click", () => {
   gameOverScreen.style.display = "none";
   context.clearRect(0, 0, canvas.width, canvas.height);
   score = 0;
+
+  scoreTxt.innerHTML = score;
   gameStart = true;
   game.character.resetPosition();
   game.obstacle1.pipePosX = constantVals.PIPE1_POSX;
