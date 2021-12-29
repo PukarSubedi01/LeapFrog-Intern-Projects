@@ -49,7 +49,6 @@ export default class Character {
     } else {
       this.characterIndex++;
     }
-    console.log(this.characterSrc[this.characterIndex]);
     bird.src = this.characterSrc[this.characterIndex];
     bird.onload = () => {
       this.applyGravity();
