@@ -6,6 +6,13 @@ export default class Character {
     this.characterWidth = constantVals.BIRD_SIZE;
     this.characterHeight = constantVals.BIRD_SIZE;
     this.velocity = 0;
+    this.characterIndex = -1;
+    this.characterSrc = [
+      "./assets/bird/Frame-1.png",
+      "./assets/bird/frame-2.png",
+      "./assets/bird/frame-3.png",
+      "./assets/bird/frame-4.png",
+    ];
     this.acceleration = 2;
   }
   applyGravity() {
@@ -37,7 +44,13 @@ export default class Character {
   };
   createCharacter = (context) => {
     const bird = new Image();
-    bird.src = "./assets/bird/Frame-1.png";
+    if (this.characterIndex === 4) {
+      this.characterIndex = 0;
+    } else {
+      this.characterIndex++;
+    }
+    console.log(this.characterSrc[this.characterIndex]);
+    bird.src = this.characterSrc[this.characterIndex];
     bird.onload = () => {
       this.applyGravity();
       context.drawImage(
