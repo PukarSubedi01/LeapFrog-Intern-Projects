@@ -29,6 +29,8 @@ export default class Obstacles {
         constantVals.PIPE_WIDTH,
         this.topPipeHeight
       );
+    };
+    bottomPipe.onload = () => {
       context.drawImage(
         bottomPipe,
         this.pipePosX,
@@ -36,9 +38,9 @@ export default class Obstacles {
         constantVals.PIPE_WIDTH,
         this.bottomPipeHeight
       );
-      this.pipePosX--;
-      if (this.pipePosX < -constantVals.PIPE_WIDTH)
-        this.pipePosX = constantVals.RESET_XPOSITION;
     };
+    this.pipePosX--;
+    if (this.pipePosX < -constantVals.PIPE_WIDTH)
+      this.pipePosX = constantVals.RESET_XPOSITION;
   };
 }
