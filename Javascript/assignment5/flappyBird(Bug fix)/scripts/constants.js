@@ -1,0 +1,16 @@
+const constantVals = {
+  TOP_PIPE_Y: 0,
+  BOTTOM_PIPE_Y: 380,
+  PIPE_WIDTH: 80,
+  RESET_XPOSITION: 800,
+  BIRD_SIZE: 60,
+  SCREEN_HEIGHT: 760,
+  FOOTER_HEIGHT: 80,
+  BIRD_STARTX: 270,
+  BIRD_STARTY: 350,
+  PIPE_GAP: 4,
+  PIPE1_POSX: 700,
+  PIPE2_POSX: 1000,
+  PIPE3_POSX: 1300,
+};
+export default constantVals;

@@ -1,0 +1,68 @@
+.game-wrapper {
+  height: 760px;
+  max-width: 600px;
+  margin: 0 auto;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+.start-screen-items {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.flappy-logo {
+  width: 250px;
+}
+.start-game-btn {
+  width: 60px;
+  margin-top: 200px;
+}
+canvas {
+  position: absolute;
+  z-index: -1;
+}
+.start-game-btn:hover {
+  cursor: pointer;
+}
+.score,
+.game-over-score,
+.high-score {
+  position: absolute;
+  font-size: 40px;
+  font-weight: 600;
+  color: white;
+  top: 10%;
+}
+.game-over-screen {
+  display: none;
+  /* display: flex; */
+  position: absolute;
+  top: 10%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* width: 220px; */
+}
+.final-score {
+  width: 250px;
+}
+.restart-btn {
+  margin-top: 50px;
+  width: 150px;
+}
+.game-over-score,
+.high-score {
+  left: 100px;
+  top: 100px;
+  font-size: 50px;
+  font-weight: 800;
+}
+
+.high-score {
+  top: 55%;
+}
+.restart-btn:hover {
+  cursor: pointer;
+}

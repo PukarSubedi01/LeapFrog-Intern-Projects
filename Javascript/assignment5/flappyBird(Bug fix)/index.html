@@ -1,0 +1,38 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flappy Bird</title>
+    <link rel="stylesheet" href="styles/reset.css" />
+    <link rel="stylesheet" href="styles/index.css" />
+  </head>
+  <body>
+    <div class="game-wrapper">
+      <div class="start-screen-items">
+        <div class="flappy-logo">
+          <img
+            src="./assets/flappybird-text.png"
+            alt="Flappy Bird Text Image"
+          />
+        </div>
+        <div class="start-game-btn">
+          <img src="./assets/start.png" alt="Start Game" />
+        </div>
+      </div>
+      <p class="score">0</p>
+      <canvas></canvas>
+      <div class="game-over-screen">
+        <div class="final-score">
+          <img src="./assets/score.png" alt="" />
+          <p class="game-over-score">40</p>
+          <p class="high-score">0</p>
+        </div>
+        <div class="restart-btn">
+          <img src="./assets/restart.png" alt="" />
+        </div>
+      </div>
+    </div>
+    <script src="scripts/index.js" type="module"></script>
+  </body>
+</html>
