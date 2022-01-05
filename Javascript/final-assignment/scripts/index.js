@@ -1,6 +1,14 @@
 import { constantVals } from "./constants.js";
-import { loadImage, loadLevel } from "./utils.js";
-import SpriteSheetParser from "./spriteSheetParser.js";
+
+import { loadBackgroundSprites } from "./sprites/spriteLoaders.js";
+
+import { loadLevel } from "./utils.js";
+
+import LayerCompositor from "./layers/layerCompositor.js";
+
+import { createBackgroundLayer, createSpriteLayer } from "./layers/layers.js";
+
+import { createMarco } from "./entities/marcoEntity.js";
 
 const canvas = document.querySelector("canvas");
 const context = canvas.getContext("2d");
@@ -8,17 +16,24 @@ const context = canvas.getContext("2d");
 canvas.height = constantVals.CANVAS_HEIGHT;
 canvas.width = constantVals.CANVAS_WIDTH;
 
-loadImage("./assets/mission1/background-sprites.png").then((image) => {
-  const sprites = new SpriteSheetParser(image);
-  loadLevel("mission1").then((mission1, index) => {
-    let yAxis = 0;
-    const bgArr = mission1.backgrounds;
-    for (let i = 0; i < bgArr.length; i++) {
-      sprites.spriteDefine(bgArr[i].name, bgArr[i].properties);
-      sprites.drawSprite(bgArr[i].name, context, 0, yAxis);
-      if (i === bgArr.length - 2) {
-        yAxis = constantVals.CANVAS_HEIGHT - bgArr[i + 1].properties.height;
-      } else yAxis += 250;
-    }
-  });
+Promise.all([
+  createMarco(),
+  loadBackgroundSprites(),
+  loadLevel("mission1"),
+]).then(([marco, backgroundSprites, level]) => {
+  const layerComp = new LayerCompositor();
+  const bgLayer = createBackgroundLayer(level.backgrounds, backgroundSprites);
+  layerComp.layers.push(bgLayer);
+
+  createMarco();
+  const spriteLayer = createSpriteLayer(marco);
+  layerComp.layers.push(spriteLayer);
+  const gravity = 0.5;
+  function update() {
+    layerComp.drawLayer(context);
+    marco.updateMarco();
+    marco.vel.y += gravity;
+    requestAnimationFrame(update);
+  }
+  update();
 });

@@ -9,6 +9,5 @@ export function loadImage(url) {
 }
 export function loadLevel(name) {
   const url = `/levels/${name}.json`;
-  console.log(url);
   return fetch(url).then((result) => result.json());
 }

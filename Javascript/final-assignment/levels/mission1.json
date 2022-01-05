@@ -2,35 +2,23 @@
   "backgrounds": [
     {
       "name": "background1",
-      "properties": {
-        "x": 8,
-        "y": 408,
-        "subSetElementWidth": 500,
-        "subsetElementHeight": 120,
-        "width": 940,
-        "height": 313
+      "position": {
+        "xAxis": 0,
+        "yAxis": 0
       }
     },
     {
       "name": "background2",
-      "properties": {
-        "x": 8,
-        "y": 580,
-        "subSetElementWidth": 1000,
-        "subsetElementHeight": 120,
-        "width": 2000,
-        "height": 213
+      "position": {
+        "xAxis": 0,
+        "yAxis": 250
       }
     },
     {
       "name": "foreground",
-      "properties": {
-        "x": 400,
-        "y": 0,
-        "subSetElementWidth": 1000,
-        "subsetElementHeight": 220,
-        "width": 960,
-        "height": 300
+      "position": {
+        "xAxis": 0,
+        "yAxis": 175
       }
     }
   ]

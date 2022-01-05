@@ -25,6 +25,7 @@ export default class SpriteSheetParser {
   }
   drawSprite(name, context, x, y) {
     const buffer = this.element.get(name);
+
     context.drawImage(buffer, x, y);
   }
 }
