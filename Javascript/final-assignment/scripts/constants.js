@@ -12,7 +12,7 @@ const marcoConstants = {
   HEIGHT: 60,
   VELOCITY_X: 200,
   VELOCITY_Y: -600,
-  GRAVITY: 30,
+  GRAVITY: 1500,
   INIT_POS_X: 64,
 };
 export { constantVals, marcoConstants };

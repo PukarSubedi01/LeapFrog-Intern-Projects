@@ -36,9 +36,9 @@ Promise.all([
   const fpsCalc = new AccuracyCalc(1 / 60);
 
   fpsCalc.update = function update(deltaTime) {
-    layerComp.drawLayer(context);
     marco.updateMarco(deltaTime);
-    marco.vel.y += gravity;
+    layerComp.drawLayer(context);
+    marco.vel.y += gravity * deltaTime;
   };
   fpsCalc.start();
 });
