@@ -1,4 +1,4 @@
-import { PositionVectors } from "../calculations.js";
+import { PositionVectors } from "../calculations/calculations.js";
 
 /**
  * holds characters

@@ -1,6 +1,7 @@
 const constantVals = {
   CANVAS_HEIGHT: 475,
   CANVAS_WIDTH: 940,
+  FPS: 1 / 60,
 };
 const marcoConstants = {
   X: 10,
@@ -9,5 +10,9 @@ const marcoConstants = {
   subsetElementHeight: 45,
   WIDTH: 50,
   HEIGHT: 60,
+  VELOCITY_X: 200,
+  VELOCITY_Y: -600,
+  GRAVITY: 30,
+  INIT_POS_X: 64,
 };
 export { constantVals, marcoConstants };
