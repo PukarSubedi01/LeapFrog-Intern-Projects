@@ -10,7 +10,7 @@ export function createMarco() {
     marco.addTrait(new Jump());
 
     marco.drawMarco = function drawMarco(context) {
-      marcoSprite.drawSprite("idle-Marco", context, this.pos.x, this.pos.y);
+      marcoSprite.draw("idle-Marco", context, this.pos.x, this.pos.y);
     };
 
     return marco;

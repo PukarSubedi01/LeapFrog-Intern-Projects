@@ -23,9 +23,26 @@ export default class SpriteSheetParser {
       );
     this.element.set(name, buffer);
   }
-  drawSprite(name, context, x, y) {
-    const buffer = this.element.get(name);
 
+  draw(name, context, x, y) {
+    const buffer = this.element.get(name);
     context.drawImage(buffer, x, y);
+  }
+  definePlatform(name, width, height) {
+    const buffer = document.createElement("canvas");
+    buffer.width = width;
+    buffer.height = height;
+    buffer.getContext("2d").drawImage(
+      this.image,
+
+      0,
+      0,
+      width,
+      height
+    );
+    this.element.set(name, buffer);
+  }
+  drawPlatform(name, context, x, y) {
+    this.draw(name, context, x, y);
   }
 }

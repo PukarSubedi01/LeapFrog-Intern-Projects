@@ -21,5 +21,11 @@
         "yAxis": 175
       }
     }
+  ],
+  "platform": [
+    {
+      "name": "platform-ground",
+      "ranges": [[0, 930, 472, 475]]
+    }
   ]
 }
