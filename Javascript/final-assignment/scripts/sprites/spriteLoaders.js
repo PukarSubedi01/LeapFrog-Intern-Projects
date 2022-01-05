@@ -1,4 +1,4 @@
-import { loadImage, loadLevel } from "../utils.js";
+import { loadImage, loadLevel } from "../loaders.js";
 import SpriteSheetParser from "./spriteSheetParser.js";
 import { marcoConstants } from "../constants.js";
 
