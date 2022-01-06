@@ -25,7 +25,7 @@
   "platform": [
     {
       "name": "platform-ground",
-      "ranges": [[0, 930, 472, 475]]
+      "ranges": [[0, 170, 79, 88]]
     }
   ]
 }

@@ -15,4 +15,8 @@ const marcoConstants = {
   GRAVITY: 1500,
   INIT_POS_X: 64,
 };
-export { constantVals, marcoConstants };
+const platFormConsts = {
+  WIDTH: 6,
+  HEIGHT: 6,
+};
+export { constantVals, marcoConstants, platFormConsts };

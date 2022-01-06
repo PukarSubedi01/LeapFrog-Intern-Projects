@@ -1,6 +1,6 @@
 import { loadImage, loadLevel } from "../loaders.js";
 import SpriteSheetParser from "./spriteSheetParser.js";
-import { marcoConstants } from "../constants.js";
+import { marcoConstants, platFormConsts } from "../constants.js";
 
 export function loadBackgroundSprites() {
   return loadImage("./assets/mission1/background-sprites.png").then((image) => {
@@ -36,7 +36,11 @@ export function loadBackgroundSprites() {
 export function loadPlatform() {
   return loadImage("./assets/mission1/platform.png").then((image) => {
     const sprites = new SpriteSheetParser(image);
-    sprites.definePlatform("platform-ground", 16, 3);
+    sprites.definePlatform(
+      "platform-ground",
+      platFormConsts.WIDTH,
+      platFormConsts.HEIGHT
+    );
     return sprites;
   });
 }

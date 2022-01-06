@@ -1,4 +1,4 @@
-import { constantVals } from "../constants.js";
+import { constantVals, platFormConsts } from "../constants.js";
 function drawBackground(background, context, sprite) {
   sprite.draw(
     background.name,
@@ -8,24 +8,21 @@ function drawBackground(background, context, sprite) {
   );
 }
 
-function drawPlatform(platform, context, sprites) {
-  platform.ranges.forEach(([x1, x2, y1, y2]) => {
-    for (let x = x1; x < x2; ++x) {
-      for (let y = y1; y < y2; ++y) {
-        sprites.drawPlatform(platform.name, context, x, y);
-      }
-    }
-  });
-}
-
-export function createPlatformLayer(platforms, sprites) {
+export function createPlatformLayer(level, sprites) {
   const platformBuffer = document.createElement("canvas");
   platformBuffer.width = constantVals.CANVAS_WIDTH;
   platformBuffer.height = constantVals.CANVAS_HEIGHT;
+  const context = platformBuffer.getContext("2d");
 
-  platforms.forEach((platform) => {
-    drawPlatform(platform, platformBuffer.getContext("2d"), sprites);
+  level.platforms.forEach((platform, x, y) => {
+    sprites.drawPlatform(
+      platform.name,
+      context,
+      x * platFormConsts.WIDTH,
+      y * platFormConsts.HEIGHT
+    );
   });
+
   return function drawPlatformLayer(context) {
     context.drawImage(platformBuffer, 0, 0);
   };

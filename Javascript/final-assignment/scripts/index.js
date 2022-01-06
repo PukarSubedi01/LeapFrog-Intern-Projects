@@ -2,8 +2,7 @@ import { constantVals, marcoConstants } from "./constants.js";
 import { loadLevel } from "./loaders.js";
 import { createMarco } from "./entities/marcoEntity.js";
 import AccuracyCalc from "./calculations/accuracyCalc.js";
-
-import KeyboardState from "./controls/keyboardState.js";
+import { controller } from "./controls/controller.js";
 
 const canvas = document.querySelector("canvas");
 const context = canvas.getContext("2d");
@@ -21,18 +20,17 @@ Promise.all([createMarco(), loadLevel("mission1")]).then(([marco, level]) => {
   fpsCalc.update = function update(deltaTime) {
     level.update(deltaTime);
     level.comp.drawLayer(context);
-    marco.vel.y += marcoConstants.GRAVITY * deltaTime;
   };
   fpsCalc.start();
-
-  const input = new KeyboardState();
-  const SPACE = 32;
-  input.addMapping(SPACE, (keyState) => {
-    if (keyState) {
-      marco.jump.start();
-    } else {
-      marco.jump.cancel();
-    }
-  });
+  const input = controller(marco);
   input.listenTo(window);
+
+  // ["mousedown", "mousemove"].forEach((eventName) => {
+  //   canvas.addEventListener(eventName, (event) => {
+  //     if (event.buttons === 1) {
+  //       marco.vel.set(0, 0);
+  //       marco.pos.set(event.offsetX, event.offsetY);
+  //     }
+  //   });
+  // });
 });

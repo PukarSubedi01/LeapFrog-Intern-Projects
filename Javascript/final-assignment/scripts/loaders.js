@@ -18,14 +18,20 @@ export function loadImage(url) {
     image.src = url;
   });
 }
-//asdasdasd
-// function createElements(level, backgrounds) {
-//   backgrounds.forEach((bg) => {
-//     level.elements.set(bg.position.xAxis, bg.position.yAxis, {
-//       name: bg.name,
-//     });
-//   });
-// }
+
+function createPlatforms(level, platforms) {
+  platforms.forEach((platform) => {
+    platform.ranges.forEach(([x1, x2, y1, y2]) => {
+      for (let x = x1; x < x2; ++x) {
+        for (let y = y1; y < y2; ++y) {
+          level.platforms.set(x, y, {
+            name: platform.name,
+          });
+        }
+      }
+    });
+  });
+}
 
 export function loadLevel(name) {
   const url = `/levels/${name}.json`;
@@ -36,7 +42,7 @@ export function loadLevel(name) {
     loadPlatform(),
   ]).then(([levelSpec, backgroundSprites, platform]) => {
     const level = new Level();
-    // createElements(level, levelSpec.backgrounds);
+    createPlatforms(level, levelSpec.platform);
 
     const bgLayer = createBackgroundLayer(
       levelSpec.backgrounds,
@@ -47,7 +53,7 @@ export function loadLevel(name) {
     const spriteLayer = createSpriteLayer(level.entities);
     level.comp.layers.push(spriteLayer);
 
-    const platformLayer = createPlatformLayer(levelSpec.platform, platform);
+    const platformLayer = createPlatformLayer(level, platform);
     level.comp.layers.push(platformLayer);
 
     return level;
