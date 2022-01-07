@@ -82,7 +82,7 @@ export function createBackgroundLayer(backgrounds, sprites) {
   };
 }
 
-export function createSpriteLayer(entities, width = 64, height = 64) {
+export function createSpriteLayer(entities, width = 214, height = 216) {
   const spriteBuffer = document.createElement("canvas");
   spriteBuffer.width = width;
   spriteBuffer.height = height;

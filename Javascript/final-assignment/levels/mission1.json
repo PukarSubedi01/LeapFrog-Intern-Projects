@@ -27,7 +27,7 @@
     {
       "name": "platform-ground",
       "type": "obstacle",
-      "ranges": [[0, 900, 79, 9]]
+      "ranges": [[0, 900, 75, 9]]
     },
     {
       "name": "platform",
