@@ -18,14 +18,14 @@
       "name": "foreground",
       "position": {
         "xAxis": 0,
-        "yAxis": 175
+        "yAxis": 15
       }
     }
   ],
   "platform": [
     {
       "name": "platform-ground",
-      "ranges": [[0, 170, 79, 88]]
+      "ranges": [[0, 17000, 79, 88]]
     }
   ]
 }

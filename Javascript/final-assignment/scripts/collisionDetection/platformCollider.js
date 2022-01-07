@@ -67,8 +67,6 @@ export default class PlatformCollider {
           entity.vel.y = 0;
         }
       } else if (entity.vel.y < 0) {
-        console.log("smaller");
-
         if (entity.pos.y < match.y2) {
           entity.pos.y = match.y2;
           entity.vel.y = 0;

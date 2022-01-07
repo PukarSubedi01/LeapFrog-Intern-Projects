@@ -14,7 +14,7 @@ export function createMarco() {
     // marco.addTrait(new Velocity());
 
     marco.drawMarco = function drawMarco(context) {
-      marcoSprite.draw("idle-Marco", context, this.pos.x, this.pos.y);
+      marcoSprite.draw("idle-Marco", context, 0, 0);
     };
 
     return marco;

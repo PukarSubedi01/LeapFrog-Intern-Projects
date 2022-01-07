@@ -10,7 +10,7 @@ export function loadBackgroundSprites() {
       y: 408,
       subSetElementWidth: 500,
       subsetElementHeight: 120,
-      width: 940,
+      width: 1880,
       height: 313,
     });
     sprites.spriteDefine("background2", {
@@ -18,16 +18,16 @@ export function loadBackgroundSprites() {
       y: 580,
       subSetElementWidth: 1000,
       subsetElementHeight: 120,
-      width: 2000,
+      width: 1880,
       height: 213,
     });
     sprites.spriteDefine("foreground", {
       x: 400,
       y: 0,
-      subSetElementWidth: 1000,
+      subSetElementWidth: 3800,
       subsetElementHeight: 220,
-      width: 960,
-      height: 300,
+      width: 5800,
+      height: 500,
     });
     return sprites;
   });
