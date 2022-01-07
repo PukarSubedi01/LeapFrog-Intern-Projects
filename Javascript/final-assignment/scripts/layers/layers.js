@@ -10,7 +10,7 @@ function drawBackground(background, context, sprite) {
 
 export function createPlatformLayer(level, sprites) {
   const platformBuffer = document.createElement("canvas");
-  platformBuffer.width = constantVals.CANVAS_WIDTH + 6;
+  platformBuffer.width = constantVals.CANVAS_WIDTH;
   platformBuffer.height = constantVals.CANVAS_HEIGHT;
   const context = platformBuffer.getContext("2d");
   const resolver = level.platformCollider.platforms;
@@ -21,7 +21,6 @@ export function createPlatformLayer(level, sprites) {
     if (drawFrom === startIndex && drawTo === endIndex) {
       return;
     }
-
     startIndex = drawFrom;
     endIndex = drawTo;
 
@@ -40,22 +39,8 @@ export function createPlatformLayer(level, sprites) {
     }
   }
 
-  // level.platforms.forEach((platform, x, y) => {
-  //   sprites.drawPlatform(
-  //     platform.name,
-  //     context,
-  //     x * platFormConsts.WIDTH,
-  //     y * platFormConsts.HEIGHT
-  //   );
-  // });
-
   return function drawPlatformLayer(context, camera) {
-    const drawWidth = resolver.toIndex(camera.size.x);
-    const drawFrom = resolver.toIndex(camera.pos.x);
-    const drawTo = drawFrom + drawWidth;
-    redraw(drawFrom, drawTo);
-
-    context.drawImage(platformBuffer, -camera.pos.x % 6, -camera.pos.y);
+    context.drawImage(platformBuffer, -camera.pos.x, -camera.pos.y);
   };
 }
 

@@ -12,14 +12,14 @@
       "name": "background2",
       "position": {
         "xAxis": 0,
-        "yAxis": 250
+        "yAxis": 120
       }
     },
     {
       "name": "foreground",
       "position": {
         "xAxis": 0,
-        "yAxis": 15
+        "yAxis": -110
       }
     }
   ],
@@ -27,7 +27,17 @@
     {
       "name": "platform-ground",
       "type": "obstacle",
-      "ranges": [[0, 900, 79, 88]]
+      "ranges": [[0, 900, 79, 9]]
+    },
+    {
+      "name": "platform",
+      "type": "obstacle",
+      "ranges": [
+        [229, 43, 48],
+        [224, 45, 30],
+        [302, 45, 48],
+        [297, 45, 30]
+      ]
     }
   ]
 }

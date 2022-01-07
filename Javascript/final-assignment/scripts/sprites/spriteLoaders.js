@@ -10,6 +10,11 @@ export function loadPlatform() {
       platFormConsts.WIDTH,
       platFormConsts.HEIGHT
     );
+    sprites.definePlatform(
+      "platform",
+      platFormConsts.WIDTH,
+      platFormConsts.HEIGHT
+    );
     return sprites;
   });
 }

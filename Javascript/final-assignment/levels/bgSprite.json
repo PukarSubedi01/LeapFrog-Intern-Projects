@@ -4,34 +4,34 @@
     {
       "name": "background1",
       "props": {
-        "x": 8,
-        "y": 408,
-        "subSetElementWidth": 500,
-        "subsetElementHeight": 120,
-        "width": 1880,
+        "x": 1300,
+        "y": 510,
+        "subSetElementWidth": 900,
+        "subsetElementHeight": 90,
+        "width": 3000,
         "height": 313
       }
     },
     {
       "name": "background2",
       "props": {
-        "x": 8,
-        "y": 580,
-        "subSetElementWidth": 1000,
-        "subsetElementHeight": 120,
-        "width": 1880,
-        "height": 213
+        "x": 0,
+        "y": 520,
+        "subSetElementWidth": 2000,
+        "subsetElementHeight": 80,
+        "width": 4000,
+        "height": 313
       }
     },
     {
       "name": "foreground",
       "props": {
         "x": 400,
-        "y": 0,
+        "y": 16,
         "subSetElementWidth": 3800,
-        "subsetElementHeight": 220,
+        "subsetElementHeight": 240,
         "width": 5800,
-        "height": 500
+        "height": 590
       }
     }
   ]
