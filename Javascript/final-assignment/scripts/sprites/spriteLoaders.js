@@ -20,7 +20,7 @@ export function loadPlatform() {
 }
 
 export function loadMarcoSprite() {
-  return loadImage("./assets/mission1/marco-origin.gif").then((image) => {
+  return loadImage("./assets/mission1/marco-origin.png").then((image) => {
     const sprites = new SpriteSheetParser(image);
     sprites.spriteDefine("idle-Marco", {
       x: marcoConstants.X,
