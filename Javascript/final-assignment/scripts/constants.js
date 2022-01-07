@@ -4,10 +4,6 @@ const constantVals = {
   FPS: 1 / 60,
 };
 const marcoConstants = {
-  X: 10,
-  Y: 14,
-  subSetElementWidth: 38,
-  subsetElementHeight: 40,
   WIDTH: 80,
   HEIGHT: 95,
   VELOCITY_X: 200,

@@ -1,5 +1,5 @@
 {
-  "imageUrl": "/assets/mission1/background-sprites.png",
+  "imageUrl": "./assets/mission1/background-sprites.png",
   "sprite": [
     {
       "name": "background1",

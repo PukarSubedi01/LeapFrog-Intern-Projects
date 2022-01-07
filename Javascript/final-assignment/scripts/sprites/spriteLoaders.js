@@ -1,6 +1,6 @@
-import { loadImage, loadLevel } from "../loaders.js";
+import { loadImage } from "../loaders.js";
 import SpriteSheetParser from "./spriteSheetParser.js";
-import { marcoConstants, platFormConsts } from "../constants.js";
+import { platFormConsts } from "../constants.js";
 
 export function loadPlatform() {
   return loadImage("./assets/mission1/platform.png").then((image) => {
@@ -15,22 +15,6 @@ export function loadPlatform() {
       platFormConsts.WIDTH,
       platFormConsts.HEIGHT
     );
-    return sprites;
-  });
-}
-
-export function loadMarcoSprite() {
-  return loadImage("./assets/mission1/marco-origin.png").then((image) => {
-    const sprites = new SpriteSheetParser(image);
-    sprites.spriteDefine("idle-Marco", {
-      x: marcoConstants.X,
-      y: marcoConstants.Y,
-      subSetElementWidth: marcoConstants.subSetElementWidth,
-      subsetElementHeight: marcoConstants.subsetElementHeight,
-      width: marcoConstants.WIDTH,
-      height: marcoConstants.HEIGHT,
-    });
-
     return sprites;
   });
 }

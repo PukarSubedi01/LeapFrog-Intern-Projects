@@ -5,12 +5,18 @@ export default class SpriteSheetParser {
   }
 
   spriteDefine(name, spriteProp) {
-    const buffer = document.createElement("canvas");
-    buffer.width = spriteProp.width;
-    buffer.height = spriteProp.height;
-    buffer
-      .getContext("2d")
-      .drawImage(
+    const buffers = [false, true].map((flip) => {
+      const buffer = document.createElement("canvas");
+      buffer.width = spriteProp.width;
+      buffer.height = spriteProp.height;
+
+      const context = buffer.getContext("2d");
+      if (flip) {
+        context.scale(-1, 1);
+        context.translate(-spriteProp.width, 0);
+      }
+
+      context.drawImage(
         this.image,
         spriteProp.x,
         spriteProp.y,
@@ -21,11 +27,14 @@ export default class SpriteSheetParser {
         spriteProp.width,
         spriteProp.height
       );
-    this.element.set(name, buffer);
+      return buffer;
+    });
+
+    this.element.set(name, buffers);
   }
 
-  draw(name, context, x, y) {
-    const buffer = this.element.get(name);
+  draw(name, context, x, y, flip = false) {
+    const buffer = this.element.get(name)[flip ? 1 : 0];
     context.drawImage(buffer, x, y);
   }
   definePlatform(name, width, height) {

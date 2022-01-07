@@ -1,0 +1,115 @@
+{
+  "imageUrl": "./assets/mission1/marco-origin.png",
+  "frames": [
+    {
+      "name": "idle-Marco",
+      "props": {
+        "x": 4,
+        "y": 112,
+        "subSetElementWidth": 45,
+        "subsetElementHeight": 42,
+        "width": 90,
+        "height": 100
+      }
+    },
+    {
+      "name": "marco1",
+      "props": {
+        "x": 51,
+        "y": 112,
+        "subSetElementWidth": 45,
+        "subsetElementHeight": 42,
+        "width": 90,
+        "height": 100
+      }
+    },
+    {
+      "name": "marco2",
+      "props": {
+        "x": 96,
+        "y": 110,
+        "subSetElementWidth": 45,
+        "subsetElementHeight": 44,
+        "width": 90,
+        "height": 100
+      }
+    },
+    {
+      "name": "marco3",
+      "props": {
+        "x": 140,
+        "y": 112,
+        "subSetElementWidth": 45,
+        "subsetElementHeight": 42,
+        "width": 90,
+        "height": 100
+      }
+    },
+    {
+      "name": "marco4",
+      "props": {
+        "x": 224,
+        "y": 112,
+        "subSetElementWidth": 45,
+        "subsetElementHeight": 42,
+        "width": 90,
+        "height": 100
+      }
+    },
+    {
+      "name": "marco5",
+      "props": {
+        "x": 273,
+        "y": 110,
+        "subSetElementWidth": 45,
+        "subsetElementHeight": 42,
+        "width": 90,
+        "height": 100
+      }
+    },
+    {
+      "name": "marco6",
+      "props": {
+        "x": 321,
+        "y": 110,
+        "subSetElementWidth": 45,
+        "subsetElementHeight": 42,
+        "width": 90,
+        "height": 100
+      }
+    },
+    {
+      "name": "marco7",
+      "props": {
+        "x": 369,
+        "y": 110,
+        "subSetElementWidth": 45,
+        "subsetElementHeight": 42,
+        "width": 90,
+        "height": 100
+      }
+    },
+    {
+      "name": "marco8",
+      "props": {
+        "x": 415,
+        "y": 110,
+        "subSetElementWidth": 45,
+        "subsetElementHeight": 42,
+        "width": 90,
+        "height": 100
+      }
+    },
+    {
+      "name": "marco9",
+      "props": {
+        "x": 464,
+        "y": 110,
+        "subSetElementWidth": 45,
+        "subsetElementHeight": 42,
+        "width": 90,
+        "height": 100
+      }
+    }
+  ]
+}

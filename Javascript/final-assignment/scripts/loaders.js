@@ -17,20 +17,6 @@ export function loadImage(url) {
   });
 }
 
-// function createPlatforms(level, platforms) {
-//   platforms.forEach((platform) => {
-//     platform.ranges.forEach(([x1, x2, y1, y2]) => {
-//       for (let x = x1; x < x2; ++x) {
-//         for (let y = y1; y < y2; ++y) {
-//           level.platforms.set(x, y, {
-//             name: platform.name,
-//             type: platform.type,
-//           });
-//         }
-//       }
-//     });
-//   });
-// }
 function createPlatforms(level, platforms) {
   function applyRange(platform, xStart, xLen, yStart, yLen) {
     const xEnd = xStart + xLen;
@@ -65,16 +51,24 @@ function loadJson(url) {
   return fetch(url).then((result) => result.json());
 }
 
-function loadSpriteSheet(name) {
+export function loadSpriteSheet(name) {
   return loadJson(`./levels/${name}.json`)
     .then((sheetSpec) =>
       Promise.all([sheetSpec, loadImage(sheetSpec.imageUrl)])
     )
     .then(([sheetSpec, image]) => {
       const sprites = new SpriteSheetParser(image);
-      sheetSpec.sprite.forEach((element) => {
-        sprites.spriteDefine(element.name, element.props);
-      });
+      if (sheetSpec.sprite) {
+        sheetSpec.sprite.forEach((element) => {
+          sprites.spriteDefine(element.name, element.props);
+        });
+      }
+      if (sheetSpec.frames) {
+        sheetSpec.frames.forEach((frame) => {
+          sprites.spriteDefine(frame.name, frame.props);
+        });
+      }
+
       return sprites;
     });
 }
