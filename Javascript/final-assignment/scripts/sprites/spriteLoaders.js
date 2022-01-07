@@ -2,37 +2,6 @@ import { loadImage, loadLevel } from "../loaders.js";
 import SpriteSheetParser from "./spriteSheetParser.js";
 import { marcoConstants, platFormConsts } from "../constants.js";
 
-export function loadBackgroundSprites() {
-  return loadImage("./assets/mission1/background-sprites.png").then((image) => {
-    const sprites = new SpriteSheetParser(image);
-    sprites.spriteDefine("background1", {
-      x: 8,
-      y: 408,
-      subSetElementWidth: 500,
-      subsetElementHeight: 120,
-      width: 1880,
-      height: 313,
-    });
-    sprites.spriteDefine("background2", {
-      x: 8,
-      y: 580,
-      subSetElementWidth: 1000,
-      subsetElementHeight: 120,
-      width: 1880,
-      height: 213,
-    });
-    sprites.spriteDefine("foreground", {
-      x: 400,
-      y: 0,
-      subSetElementWidth: 3800,
-      subsetElementHeight: 220,
-      width: 5800,
-      height: 500,
-    });
-    return sprites;
-  });
-}
-
 export function loadPlatform() {
   return loadImage("./assets/mission1/platform.png").then((image) => {
     const sprites = new SpriteSheetParser(image);

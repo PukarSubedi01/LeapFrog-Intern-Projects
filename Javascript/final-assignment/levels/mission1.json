@@ -1,4 +1,5 @@
 {
+  "spriteSheet": "bgSprite",
   "backgrounds": [
     {
       "name": "background1",
@@ -25,7 +26,7 @@
   "platform": [
     {
       "name": "platform-ground",
-      "ranges": [[0, 17000, 79, 88]]
+      "ranges": [[0, 900, 79, 88]]
     }
   ]
 }

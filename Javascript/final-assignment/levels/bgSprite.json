@@ -1,0 +1,38 @@
+{
+  "imageUrl": "/assets/mission1/background-sprites.png",
+  "sprite": [
+    {
+      "name": "background1",
+      "props": {
+        "x": 8,
+        "y": 408,
+        "subSetElementWidth": 500,
+        "subsetElementHeight": 120,
+        "width": 1880,
+        "height": 313
+      }
+    },
+    {
+      "name": "background2",
+      "props": {
+        "x": 8,
+        "y": 580,
+        "subSetElementWidth": 1000,
+        "subsetElementHeight": 120,
+        "width": 1880,
+        "height": 213
+      }
+    },
+    {
+      "name": "foreground",
+      "props": {
+        "x": 400,
+        "y": 0,
+        "subSetElementWidth": 3800,
+        "subsetElementHeight": 220,
+        "width": 5800,
+        "height": 500
+      }
+    }
+  ]
+}

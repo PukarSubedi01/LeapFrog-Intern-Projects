@@ -1,13 +1,11 @@
 import Level from "./levels/level.js";
+import SpriteSheetParser from "./sprites/spriteSheetParser.js";
 import {
   createBackgroundLayer,
   createSpriteLayer,
   createPlatformLayer,
 } from "./layers/layers.js";
-import {
-  loadBackgroundSprites,
-  loadPlatform,
-} from "./sprites/spriteLoaders.js";
+import { loadPlatform } from "./sprites/spriteLoaders.js";
 
 export function loadImage(url) {
   return new Promise((resolve) => {
@@ -32,30 +30,50 @@ function createPlatforms(level, platforms) {
     });
   });
 }
+function loadJson(url) {
+  return fetch(url).then((result) => result.json());
+}
+
+function loadSpriteSheet(name) {
+  return loadJson(`/levels/${name}.json`)
+    .then((sheetSpec) =>
+      Promise.all([sheetSpec, loadImage(sheetSpec.imageUrl)])
+    )
+    .then(([sheetSpec, image]) => {
+      const sprites = new SpriteSheetParser(image);
+      sheetSpec.sprite.forEach((element) => {
+        sprites.spriteDefine(element.name, element.props);
+      });
+      return sprites;
+    });
+}
 
 export function loadLevel(name) {
-  const url = `/levels/${name}.json`;
-  return Promise.all([
-    fetch(url).then((result) => result.json()),
+  return loadJson(`/levels/${name}.json`)
+    .then((levelSpec) =>
+      Promise.all([
+        levelSpec,
+        loadSpriteSheet(levelSpec.spriteSheet),
+        loadPlatform(),
+      ])
+    )
 
-    loadBackgroundSprites(),
-    loadPlatform(),
-  ]).then(([levelSpec, backgroundSprites, platform]) => {
-    const level = new Level();
-    createPlatforms(level, levelSpec.platform);
+    .then(([levelSpec, backgroundSprites, platform]) => {
+      const level = new Level();
+      createPlatforms(level, levelSpec.platform);
 
-    const bgLayer = createBackgroundLayer(
-      levelSpec.backgrounds,
-      backgroundSprites
-    );
-    level.comp.layers.push(bgLayer);
+      const bgLayer = createBackgroundLayer(
+        levelSpec.backgrounds,
+        backgroundSprites
+      );
+      level.comp.layers.push(bgLayer);
 
-    const spriteLayer = createSpriteLayer(level.entities);
-    level.comp.layers.push(spriteLayer);
+      const spriteLayer = createSpriteLayer(level.entities);
+      level.comp.layers.push(spriteLayer);
 
-    const platformLayer = createPlatformLayer(level, platform);
-    level.comp.layers.push(platformLayer);
+      const platformLayer = createPlatformLayer(level, platform);
+      level.comp.layers.push(platformLayer);
 
-    return level;
-  });
+      return level;
+    });
 }
