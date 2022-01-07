@@ -24,7 +24,7 @@ export default class PlatformCollider {
     );
 
     matches.forEach((match) => {
-      if (match.platform.name !== "platform-ground") {
+      if (match.platform.name !== "obstacle") {
         return;
       }
       if (entity.vel.x > 0) {
@@ -58,7 +58,7 @@ export default class PlatformCollider {
       y
     );
     matches.forEach((match) => {
-      if (match.platform.name !== "platform-ground") {
+      if (match.platform.type !== "obstacle") {
         return;
       }
       if (entity.vel.y > 0) {

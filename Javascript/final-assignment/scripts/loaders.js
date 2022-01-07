@@ -24,6 +24,7 @@ function createPlatforms(level, platforms) {
         for (let y = y1; y < y2; ++y) {
           level.platforms.set(x, y, {
             name: platform.name,
+            type: platform.type,
           });
         }
       }
