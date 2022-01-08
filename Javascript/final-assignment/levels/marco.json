@@ -110,6 +110,17 @@
         "width": 90,
         "height": 100
       }
+    },
+    {
+      "name": "jump",
+      "props": {
+        "x": 172,
+        "y": 667,
+        "subSetElementWidth": 45,
+        "subsetElementHeight": 42,
+        "width": 90,
+        "height": 100
+      }
     }
   ]
 }

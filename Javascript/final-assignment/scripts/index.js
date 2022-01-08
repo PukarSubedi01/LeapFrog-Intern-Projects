@@ -26,6 +26,10 @@ Promise.all([createMarco(), loadLevel("mission1")]).then(([marco, level]) => {
 
   fpsCalc.update = function update(deltaTime) {
     level.update(deltaTime);
+    if (marco.pos.x > 200) {
+      cam.pos.x = marco.pos.x - 200;
+    }
+
     level.comp.drawLayer(context, cam);
   };
 

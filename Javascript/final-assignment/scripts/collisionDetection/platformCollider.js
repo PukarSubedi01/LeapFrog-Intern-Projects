@@ -1,4 +1,4 @@
-import { marcoConstants } from "../constants.js";
+import { dirConsts } from "../constants.js";
 import PlatformResolver from "./platformResolver.js";
 
 export default class PlatformCollider {
@@ -65,13 +65,17 @@ export default class PlatformCollider {
         if (entity.pos.y + entity.size.y > match.y1) {
           entity.pos.y = match.y1 - entity.size.y;
           entity.vel.y = 0;
-        }
-      } else if (entity.vel.y < 0) {
-        if (entity.pos.y < match.y2) {
-          entity.pos.y = match.y2;
-          entity.vel.y = 0;
+          entity.obstruct(dirConsts.BOTTOM);
         }
       }
+      // else if (entity.vel.y < 0) {
+      //   // checks the collison against the head
+      //   if (entity.pos.y < match.y2) {
+      //     entity.pos.y = match.y2;
+      //     entity.vel.y = 0;
+      //     entity.obstruct(dirConsts.TOP);
+      //   }
+      // }
     });
   }
 }

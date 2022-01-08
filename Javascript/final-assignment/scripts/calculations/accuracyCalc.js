@@ -5,6 +5,9 @@ export default class AccuracyCalc {
 
     this.updateFps = (time) => {
       accumulatedTime += (time - prevTime) / 1000;
+      if (accumulatedTime > 1) {
+        accumulatedTime = 1;
+      }
       while (accumulatedTime > deltatime) {
         this.update(deltatime);
         accumulatedTime -= deltatime;

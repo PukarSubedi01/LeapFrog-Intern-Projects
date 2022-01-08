@@ -11,11 +11,11 @@ export function controller(entity) {
   });
 
   input.addMapping("ArrowRight", (keyState) => {
-    entity.walk.dir = keyState;
+    entity.walk.dir += keyState ? 1 : -1;
   });
 
   input.addMapping("ArrowLeft", (keyState) => {
-    entity.walk.dir = -keyState;
+    entity.walk.dir += -keyState ? -1 : 1;
   });
   return input;
 }

@@ -11,8 +11,14 @@ const marcoConstants = {
   GRAVITY: 1500,
   INIT_POS_X: 64,
 };
+
+const dirConsts = {
+  TOP: "top",
+  BOTTOM: "bottom",
+};
+
 const platFormConsts = {
   WIDTH: 6,
   HEIGHT: 6,
 };
-export { constantVals, marcoConstants, platFormConsts };
+export { constantVals, marcoConstants, platFormConsts, dirConsts };

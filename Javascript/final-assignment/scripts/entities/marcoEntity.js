@@ -29,6 +29,9 @@ export function createMarco() {
       10
     );
     function animateMarco(marco) {
+      if (!marco.jump.canJump) {
+        return "jump";
+      }
       if (marco.walk.dir !== 0) {
         return animateFrame(marco.walk.distance);
       }
