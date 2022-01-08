@@ -122,5 +122,22 @@
         "height": 100
       }
     }
+  ],
+  "animations": [
+    {
+      "name": "run",
+      "frameLen": 10,
+      "frames": [
+        "marco1",
+        "marco2",
+        "marco3",
+        "marco4",
+        "marco5",
+        "marco6",
+        "marco7",
+        "marco8",
+        "marco9"
+      ]
+    }
   ]
 }

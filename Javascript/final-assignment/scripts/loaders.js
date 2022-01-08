@@ -6,6 +6,7 @@ import {
   createPlatformLayer,
 } from "./layers/layers.js";
 import { loadPlatform } from "./sprites/spriteLoaders.js";
+import createAnimation from "./animations/animate.js";
 
 export function loadImage(url) {
   return new Promise((resolve) => {
@@ -66,6 +67,15 @@ export function loadSpriteSheet(name) {
       if (sheetSpec.frames) {
         sheetSpec.frames.forEach((frame) => {
           sprites.spriteDefine(frame.name, frame.props);
+        });
+      }
+      if (sheetSpec.animations) {
+        sheetSpec.animations.forEach((animationSpec) => {
+          const animation = createAnimation(
+            animationSpec.frames,
+            animationSpec.frameLen
+          );
+          sprites.defineAnimation(animationSpec.name, animation);
         });
       }
 

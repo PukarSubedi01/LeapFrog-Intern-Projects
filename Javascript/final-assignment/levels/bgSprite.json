@@ -1,5 +1,5 @@
 {
-  "imageUrl": "./assets/mission1/background-sprites.png",
+  "imageUrl": "./assets/mission1/background-sprites1.png",
   "sprite": [
     {
       "name": "background1",
@@ -32,6 +32,39 @@
         "subsetElementHeight": 240,
         "width": 5800,
         "height": 590
+      }
+    },
+    {
+      "name": "rocket-house",
+      "props": {
+        "x": 689,
+        "y": 653,
+        "subSetElementWidth": 380,
+        "subsetElementHeight": 220,
+        "width": 630,
+        "height": 480
+      }
+    },
+    {
+      "name": "cart",
+      "props": {
+        "x": 1926,
+        "y": 426,
+        "subSetElementWidth": 90,
+        "subsetElementHeight": 70,
+        "width": 250,
+        "height": 200
+      }
+    },
+    {
+      "name": "brick-wall",
+      "props": {
+        "x": 2464,
+        "y": 592,
+        "subSetElementWidth": 100,
+        "subsetElementHeight": 140,
+        "width": 250,
+        "height": 300
       }
     }
   ]

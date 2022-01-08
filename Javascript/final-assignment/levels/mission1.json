@@ -21,6 +21,27 @@
         "xAxis": 0,
         "yAxis": -110
       }
+    },
+    {
+      "name": "rocket-house",
+      "position": {
+        "xAxis": 2190,
+        "yAxis": -10
+      }
+    },
+    {
+      "name": "cart",
+      "position": {
+        "xAxis": 2968,
+        "yAxis": 280
+      }
+    },
+    {
+      "name": "brick-wall",
+      "position": {
+        "xAxis": 3390,
+        "yAxis": 160
+      }
     }
   ],
   "platform": [
@@ -33,10 +54,10 @@
       "name": "platform",
       "type": "obstacle",
       "ranges": [
-        [229, 43, 48],
-        [224, 45, 30],
-        [302, 45, 48],
-        [297, 45, 30]
+        [226, 44, 37],
+        [300, 44, 37],
+        [241, 25, 17],
+        [315, 25, 17]
       ]
     }
   ]

@@ -2,6 +2,10 @@ export default class SpriteSheetParser {
   constructor(image) {
     this.image = image;
     this.element = new Map();
+    this.animations = new Map();
+  }
+  defineAnimation(name, animation) {
+    this.animations.set(name, animation);
   }
 
   spriteDefine(name, spriteProp) {
