@@ -1,0 +1,157 @@
+{
+  "imageUrl": "./assets/mission1/soldiers-sprites.png",
+  "frames": [
+    {
+      "name": "soldier1",
+      "props": {
+        "x": 4,
+        "y": 2,
+        "subSetElementWidth": 24,
+        "subsetElementHeight": 41,
+        "width": 60,
+        "height": 90
+      }
+    },
+    {
+      "name": "soldier2",
+      "props": {
+        "x": 38,
+        "y": 2,
+        "subSetElementWidth": 24,
+        "subsetElementHeight": 41,
+        "width": 60,
+        "height": 90
+      }
+    },
+    {
+      "name": "soldier3",
+      "props": {
+        "x": 71,
+        "y": 1,
+        "subSetElementWidth": 24,
+        "subsetElementHeight": 41,
+        "width": 60,
+        "height": 90
+      }
+    },
+    {
+      "name": "soldier4",
+      "props": {
+        "x": 105,
+        "y": 0,
+        "subSetElementWidth": 24,
+        "subsetElementHeight": 41,
+        "width": 60,
+        "height": 90
+      }
+    },
+    {
+      "name": "soldier5",
+      "props": {
+        "x": 138,
+        "y": 1,
+        "subSetElementWidth": 26,
+        "subsetElementHeight": 41,
+        "width": 62,
+        "height": 90
+      }
+    },
+    {
+      "name": "soldier6",
+      "props": {
+        "x": 172,
+        "y": 1,
+        "subSetElementWidth": 26,
+        "subsetElementHeight": 41,
+        "width": 62,
+        "height": 90
+      }
+    },
+    {
+      "name": "soldier7",
+      "props": {
+        "x": 204,
+        "y": 1,
+        "subSetElementWidth": 26,
+        "subsetElementHeight": 41,
+        "width": 62,
+        "height": 90
+      }
+    },
+    {
+      "name": "soldier8",
+      "props": {
+        "x": 235,
+        "y": 1,
+        "subSetElementWidth": 26,
+        "subsetElementHeight": 41,
+        "width": 62,
+        "height": 90
+      }
+    },
+    {
+      "name": "soldier9",
+      "props": {
+        "x": 266,
+        "y": 1,
+        "subSetElementWidth": 26,
+        "subsetElementHeight": 41,
+        "width": 62,
+        "height": 90
+      }
+    },
+    {
+      "name": "soldier10",
+      "props": {
+        "x": 298,
+        "y": 1,
+        "subSetElementWidth": 26,
+        "subsetElementHeight": 41,
+        "width": 62,
+        "height": 90
+      }
+    },
+    {
+      "name": "soldier11",
+      "props": {
+        "x": 335,
+        "y": 1,
+        "subSetElementWidth": 26,
+        "subsetElementHeight": 41,
+        "width": 62,
+        "height": 90
+      }
+    },
+    {
+      "name": "soldier12",
+      "props": {
+        "x": 373,
+        "y": 1,
+        "subSetElementWidth": 26,
+        "subsetElementHeight": 41,
+        "width": 62,
+        "height": 90
+      }
+    }
+  ],
+  "animations": [
+    {
+      "name": "run",
+      "frameLen": 0.15,
+      "frames": [
+        "soldier1",
+        "soldier2",
+        "soldier3",
+        "soldier4",
+        "soldier5",
+        "soldier6",
+        "soldier7",
+        "soldier8",
+        "soldier9",
+        "soldier10",
+        "soldier11",
+        "soldier12"
+      ]
+    }
+  ]
+}

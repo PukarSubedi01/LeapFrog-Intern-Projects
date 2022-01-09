@@ -4,7 +4,6 @@ import Jump from "../traits/jump.js";
 import Walk from "../traits/walk.js";
 import { marcoConstants } from "../constants.js";
 import { loadSpriteSheet } from "../loaders.js";
-import createAnimation from "../animations/animate.js";
 
 export function loadMarco() {
   return loadSpriteSheet("marco").then(createMarcoFactory);
@@ -32,7 +31,7 @@ function createMarcoFactory(sprite) {
     marco.addTrait(new Walk());
     marco.addTrait(new Jump());
 
-    marco.drawMarco = drawMarco;
+    marco.draw = drawMarco;
 
     return marco;
   };

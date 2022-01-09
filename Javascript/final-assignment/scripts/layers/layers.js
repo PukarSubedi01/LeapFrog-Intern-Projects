@@ -91,7 +91,7 @@ export function createSpriteLayer(entities, width = 214, height = 216) {
   return function drawSpriteLayer(context, camera) {
     entities.forEach((entity) => {
       spriteBufferContext.clearRect(0, 0, width, height);
-      entity.drawMarco(spriteBufferContext);
+      entity.draw(spriteBufferContext);
       context.drawImage(
         spriteBuffer,
         entity.pos.x - camera.pos.x,

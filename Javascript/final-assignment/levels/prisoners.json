@@ -1,0 +1,314 @@
+{
+  "imageUrl": "./assets/mission1/prisoners.png",
+  "frames": [
+    {
+      "name": "prisoner-tied1",
+      "props": {
+        "x": 245,
+        "y": 522,
+        "subSetElementWidth": 40,
+        "subsetElementHeight": 30,
+        "width": 70,
+        "height": 80
+      }
+    },
+    {
+      "name": "prisoner-tied2",
+      "props": {
+        "x": 286,
+        "y": 522,
+        "subSetElementWidth": 40,
+        "subsetElementHeight": 30,
+        "width": 70,
+        "height": 80
+      }
+    },
+    {
+      "name": "prisoner-tied3",
+      "props": {
+        "x": 324,
+        "y": 524,
+        "subSetElementWidth": 40,
+        "subsetElementHeight": 30,
+        "width": 70,
+        "height": 80
+      }
+    },
+    {
+      "name": "prisoner-tied4",
+      "props": {
+        "x": 364,
+        "y": 523,
+        "subSetElementWidth": 40,
+        "subsetElementHeight": 30,
+        "width": 70,
+        "height": 80
+      }
+    },
+    {
+      "name": "prisoner-tied5",
+      "props": {
+        "x": 409,
+        "y": 519,
+        "subSetElementWidth": 44,
+        "subsetElementHeight": 34,
+        "width": 74,
+        "height": 84
+      }
+    },
+
+    {
+      "name": "prisoner-released1",
+      "props": {
+        "x": 16,
+        "y": 623,
+        "subSetElementWidth": 34,
+        "subsetElementHeight": 40,
+        "width": 70,
+        "height": 84
+      }
+    },
+    {
+      "name": "prisoner-released2",
+      "props": {
+        "x": 53,
+        "y": 623,
+        "subSetElementWidth": 34,
+        "subsetElementHeight": 40,
+        "width": 70,
+        "height": 84
+      }
+    },
+    {
+      "name": "prisoner-released3",
+      "props": {
+        "x": 97,
+        "y": 621,
+        "subSetElementWidth": 45,
+        "subsetElementHeight": 40,
+        "width": 81,
+        "height": 84
+      }
+    },
+    {
+      "name": "prisoner-released4",
+      "props": {
+        "x": 147,
+        "y": 621,
+        "subSetElementWidth": 45,
+        "subsetElementHeight": 40,
+        "width": 81,
+        "height": 84
+      }
+    },
+    {
+      "name": "salute1",
+      "props": {
+        "x": 12,
+        "y": 671,
+        "subSetElementWidth": 30,
+        "subsetElementHeight": 40,
+        "width": 68,
+        "height": 84
+      }
+    },
+    {
+      "name": "salute2",
+      "props": {
+        "x": 40,
+        "y": 670,
+        "subSetElementWidth": 30,
+        "subsetElementHeight": 40,
+        "width": 68,
+        "height": 84
+      }
+    },
+    {
+      "name": "salute3",
+      "props": {
+        "x": 68,
+        "y": 670,
+        "subSetElementWidth": 40,
+        "subsetElementHeight": 40,
+        "width": 78,
+        "height": 84
+      }
+    },
+    {
+      "name": "salute4",
+      "props": {
+        "x": 105,
+        "y": 672,
+        "subSetElementWidth": 40,
+        "subsetElementHeight": 40,
+        "width": 78,
+        "height": 84
+      }
+    },
+    {
+      "name": "salute5",
+      "props": {
+        "x": 145,
+        "y": 671,
+        "subSetElementWidth": 40,
+        "subsetElementHeight": 40,
+        "width": 78,
+        "height": 84
+      }
+    },
+    {
+      "name": "salute6",
+      "props": {
+        "x": 183,
+        "y": 671,
+        "subSetElementWidth": 30,
+        "subsetElementHeight": 40,
+        "width": 68,
+        "height": 84
+      }
+    },
+    {
+      "name": "run1",
+      "props": {
+        "x": 8,
+        "y": 577,
+        "subSetElementWidth": 40,
+        "subsetElementHeight": 40,
+        "width": 78,
+        "height": 84
+      }
+    },
+    {
+      "name": "run2",
+      "props": {
+        "x": 48,
+        "y": 574,
+        "subSetElementWidth": 40,
+        "subsetElementHeight": 40,
+        "width": 78,
+        "height": 84
+      }
+    },
+    {
+      "name": "run3",
+      "props": {
+        "x": 100,
+        "y": 574,
+        "subSetElementWidth": 30,
+        "subsetElementHeight": 40,
+        "width": 68,
+        "height": 84
+      }
+    },
+    {
+      "name": "run4",
+      "props": {
+        "x": 132,
+        "y": 574,
+        "subSetElementWidth": 40,
+        "subsetElementHeight": 40,
+        "width": 78,
+        "height": 84
+      }
+    },
+    {
+      "name": "run5",
+      "props": {
+        "x": 172,
+        "y": 573,
+        "subSetElementWidth": 30,
+        "subsetElementHeight": 40,
+        "width": 68,
+        "height": 84
+      }
+    },
+    {
+      "name": "run6",
+      "props": {
+        "x": 203,
+        "y": 573,
+        "subSetElementWidth": 35,
+        "subsetElementHeight": 40,
+        "width": 73,
+        "height": 84
+      }
+    },
+    {
+      "name": "run7",
+      "props": {
+        "x": 245,
+        "y": 568,
+        "subSetElementWidth": 35,
+        "subsetElementHeight": 45,
+        "width": 73,
+        "height": 89
+      }
+    },
+    {
+      "name": "run8",
+      "props": {
+        "x": 279,
+        "y": 567,
+        "subSetElementWidth": 38,
+        "subsetElementHeight": 45,
+        "width": 76,
+        "height": 89
+      }
+    },
+    {
+      "name": "run9",
+      "props": {
+        "x": 316,
+        "y": 567,
+        "subSetElementWidth": 43,
+        "subsetElementHeight": 45,
+        "width": 81,
+        "height": 89
+      }
+    },
+    {
+      "name": "run10",
+      "props": {
+        "x": 358,
+        "y": 567,
+        "subSetElementWidth": 46,
+        "subsetElementHeight": 45,
+        "width": 84,
+        "height": 89
+      }
+    }
+  ],
+  "animations": [
+    {
+      "name": "compensate",
+      "frameLen": 0.5,
+      "frames": [
+        "prisoner-tied1",
+        "prisoner-tied2",
+        "prisoner-tied3",
+        "prisoner-tied4",
+        "prisoner-tied5",
+        "prisoner-released1",
+        "prisoner-released2",
+        "prisoner-released3",
+        "prisoner-released4",
+        "salute1",
+        "salute2",
+        "salute3",
+        "salute4",
+        "salute5",
+        "salute6",
+        "run1",
+        "run2",
+        "run3",
+        "run4",
+        "run5",
+        "run6",
+        "run7",
+        "run8",
+        "run9",
+        "run10"
+      ]
+    }
+  ]
+}

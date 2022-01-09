@@ -11,6 +11,14 @@ const marcoConstants = {
   GRAVITY: 1500,
   INIT_POS_X: 64,
 };
+const soldierConsts = {
+  WIDTH: 10,
+  HEIGHT: 95,
+};
+const prisonerConsts = {
+  WIDTH: 10,
+  HEIGHT: 95,
+};
 
 const dirConsts = {
   TOP: "top",
@@ -21,4 +29,11 @@ const platFormConsts = {
   WIDTH: 6,
   HEIGHT: 6,
 };
-export { constantVals, marcoConstants, platFormConsts, dirConsts };
+export {
+  constantVals,
+  marcoConstants,
+  platFormConsts,
+  dirConsts,
+  soldierConsts,
+  prisonerConsts,
+};

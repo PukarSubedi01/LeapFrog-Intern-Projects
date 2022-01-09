@@ -8,6 +8,7 @@ export default class Entity {
     this.pos = new PositionVectors(0, 0);
     this.vel = new PositionVectors(0, 0);
     this.size = new PositionVectors(0, 0);
+    this.alivePeriod = 0;
 
     this.traits = [];
   }
@@ -24,6 +25,7 @@ export default class Entity {
     this.traits.forEach((trait) => {
       trait.update(this, deltaTime);
     });
+    this.alivePeriod += deltaTime;
   }
 }
 export class Trait {
