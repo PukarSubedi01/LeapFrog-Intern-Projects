@@ -5,10 +5,7 @@ import {
   prisonerConsts,
 } from "./constants.js";
 import { loadLevel } from "./loaders.js";
-import { loadMarco } from "./entities/marcoEntity.js";
-import { loadSoldiers } from "./entities/soldiersEntity.js";
-import { loadPrisoners } from "./entities/prisonersEntity.js";
-
+import { loadEntities } from "./entities/entityLoader.js";
 import AccuracyCalc from "./calculations/accuracyCalc.js";
 import { controller, mouseDebugger } from "./controls/controller.js";
 import Camera from "./camera.js";
@@ -20,17 +17,13 @@ const context = canvas.getContext("2d");
 canvas.height = constantVals.CANVAS_HEIGHT;
 canvas.width = constantVals.CANVAS_WIDTH;
 
-Promise.all([
-  loadMarco(),
-  loadSoldiers(),
-  loadPrisoners(),
-  loadLevel("mission1"),
-]).then(([createMarco, createSoldiers, createPrisoner, level]) => {
+Promise.all([loadEntities(), loadLevel("mission1")]).then(([entity, level]) => {
   const cam = new Camera();
+  console.log(entity);
   window.camera = cam;
-  const marco = createMarco();
-  const soldiers = createSoldiers();
-  const prisoners = createPrisoner();
+  const marco = entity.marco();
+  const soldiers = entity.soldiers();
+  const prisoners = entity.prisoners();
 
   soldiers.pos.set(400, constantVals.CANVAS_HEIGHT - soldierConsts.HEIGHT);
   prisoners.pos.set(400, constantVals.CANVAS_HEIGHT - prisonerConsts.HEIGHT);
