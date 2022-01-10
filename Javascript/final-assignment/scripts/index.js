@@ -4,7 +4,7 @@ import {
   soldierConsts,
   prisonerConsts,
 } from "./constants.js";
-import { loadLevel } from "./loaders.js";
+import { createLevelLoader } from "./loaders.js";
 import { loadEntities } from "./entities/entityLoader.js";
 import AccuracyCalc from "./calculations/accuracyCalc.js";
 import { controller, mouseDebugger } from "./controls/controller.js";
@@ -12,21 +12,19 @@ import Camera from "./camera.js";
 import { createCameraLayer } from "./layers/layers.js";
 
 const canvas = document.querySelector("canvas");
-const context = canvas.getContext("2d");
 
 canvas.height = constantVals.CANVAS_HEIGHT;
 canvas.width = constantVals.CANVAS_WIDTH;
 
-Promise.all([loadEntities(), loadLevel("mission1")]).then(([entity, level]) => {
-  const cam = new Camera();
-  console.log(entity);
-  window.camera = cam;
-  const marco = entity.marco();
-  const soldiers = entity.soldiers();
-  const prisoners = entity.prisoners();
+async function main(canvas) {
+  const context = canvas.getContext("2d");
+  const entityFactory = await loadEntities();
+  const loadLevel = await createLevelLoader(entityFactory);
+  const level = await loadLevel("mission1");
 
-  soldiers.pos.set(400, constantVals.CANVAS_HEIGHT - soldierConsts.HEIGHT);
-  prisoners.pos.set(400, constantVals.CANVAS_HEIGHT - prisonerConsts.HEIGHT);
+  const cam = new Camera();
+  window.camera = cam;
+  const marco = entityFactory.marco();
 
   marco.pos.set(
     marcoConstants.INIT_POS_X,
@@ -35,8 +33,6 @@ Promise.all([loadEntities(), loadLevel("mission1")]).then(([entity, level]) => {
 
   level.comp.layers.push(createCameraLayer(cam));
   level.entities.add(marco);
-  level.entities.add(soldiers);
-  level.entities.add(prisoners);
 
   const fpsCalc = new AccuracyCalc(1 / 60);
 
@@ -50,8 +46,9 @@ Promise.all([loadEntities(), loadLevel("mission1")]).then(([entity, level]) => {
   };
 
   fpsCalc.start();
-  mouseDebugger(canvas, soldiers, cam);
+  mouseDebugger(canvas, marco, cam);
 
   const input = controller(marco);
   input.listenTo(window);
-});
+}
+main(canvas);

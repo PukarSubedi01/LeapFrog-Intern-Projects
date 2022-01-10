@@ -60,5 +60,15 @@
         [315, 25, 17]
       ]
     }
+  ],
+  "entities": [
+    {
+      "name": "soldiers",
+      "pos": [758, 0]
+    },
+    {
+      "name": "prisoners",
+      "pos": [432, 0]
+    }
   ]
 }

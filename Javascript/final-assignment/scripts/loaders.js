@@ -18,6 +18,87 @@ export function loadImage(url) {
   });
 }
 
+export function loadSpriteSheet(name) {
+  return loadJson(`./levels/${name}.json`)
+    .then((sheetSpec) =>
+      Promise.all([sheetSpec, loadImage(sheetSpec.imageUrl)])
+    )
+    .then(([sheetSpec, image]) => {
+      const sprites = new SpriteSheetParser(image);
+      if (sheetSpec.sprite) {
+        sheetSpec.sprite.forEach((element) => {
+          sprites.spriteDefine(element.name, element.props);
+        });
+      }
+      if (sheetSpec.frames) {
+        sheetSpec.frames.forEach((frame) => {
+          sprites.spriteDefine(frame.name, frame.props);
+        });
+      }
+      if (sheetSpec.animations) {
+        sheetSpec.animations.forEach((animationSpec) => {
+          const animation = createAnimation(
+            animationSpec.frames,
+            animationSpec.frameLen
+          );
+          sprites.defineAnimation(animationSpec.name, animation);
+        });
+      }
+
+      return sprites;
+    });
+}
+
+export function createLevelLoader(entityFactory) {
+  return function loadLevel(name) {
+    return loadJson(`./levels/${name}.json`)
+      .then((levelSpec) =>
+        Promise.all([
+          levelSpec,
+          loadSpriteSheet(levelSpec.spriteSheet),
+          loadPlatform(),
+        ])
+      )
+
+      .then(([levelSpec, backgroundSprites, platform]) => {
+        const level = new Level();
+
+        createPlatforms(level, levelSpec.platform);
+
+        setupBackgrounds(levelSpec, level, backgroundSprites);
+
+        setupEntities(levelSpec, level, entityFactory);
+
+        setupPlatform(level, platform);
+        return level;
+      });
+  };
+}
+
+function setupBackgrounds(levelSpec, level, backgroundSprites) {
+  const bgLayer = createBackgroundLayer(
+    levelSpec.backgrounds,
+    backgroundSprites
+  );
+  level.comp.layers.push(bgLayer);
+}
+function setupEntities(levelSpec, level, entityFactory) {
+  levelSpec.entities.forEach(({ name, pos: [x, y] }) => {
+    const createEntity = entityFactory[name];
+    const entity = createEntity();
+    entity.pos.set(x, y);
+    level.entities.add(entity);
+  });
+
+  const spriteLayer = createSpriteLayer(level.entities);
+  level.comp.layers.push(spriteLayer);
+}
+
+function setupPlatform(level, platform) {
+  const platformLayer = createPlatformLayer(level, platform);
+  level.comp.layers.push(platformLayer);
+}
+
 function createPlatforms(level, platforms) {
   function applyRange(platform, xStart, xLen, yStart, yLen) {
     const xEnd = xStart + xLen;
@@ -50,66 +131,4 @@ function createPlatforms(level, platforms) {
 
 function loadJson(url) {
   return fetch(url).then((result) => result.json());
-}
-
-export function loadSpriteSheet(name) {
-  return loadJson(`./levels/${name}.json`)
-    .then((sheetSpec) =>
-      Promise.all([sheetSpec, loadImage(sheetSpec.imageUrl)])
-    )
-    .then(([sheetSpec, image]) => {
-      const sprites = new SpriteSheetParser(image);
-      if (sheetSpec.sprite) {
-        sheetSpec.sprite.forEach((element) => {
-          sprites.spriteDefine(element.name, element.props);
-        });
-      }
-      if (sheetSpec.frames) {
-        sheetSpec.frames.forEach((frame) => {
-          sprites.spriteDefine(frame.name, frame.props);
-        });
-      }
-      if (sheetSpec.animations) {
-        sheetSpec.animations.forEach((animationSpec) => {
-          const animation = createAnimation(
-            animationSpec.frames,
-            animationSpec.frameLen
-          );
-          sprites.defineAnimation(animationSpec.name, animation);
-        });
-      }
-
-      return sprites;
-    });
-}
-
-export function loadLevel(name) {
-  return loadJson(`./levels/${name}.json`)
-    .then((levelSpec) =>
-      Promise.all([
-        levelSpec,
-        loadSpriteSheet(levelSpec.spriteSheet),
-        loadPlatform(),
-      ])
-    )
-
-    .then(([levelSpec, backgroundSprites, platform]) => {
-      const level = new Level();
-
-      createPlatforms(level, levelSpec.platform);
-
-      const bgLayer = createBackgroundLayer(
-        levelSpec.backgrounds,
-        backgroundSprites
-      );
-      level.comp.layers.push(bgLayer);
-
-      const spriteLayer = createSpriteLayer(level.entities);
-      level.comp.layers.push(spriteLayer);
-
-      const platformLayer = createPlatformLayer(level, platform);
-      level.comp.layers.push(platformLayer);
-
-      return level;
-    });
 }
