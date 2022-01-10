@@ -2,13 +2,13 @@ const constantVals = {
   CANVAS_HEIGHT: 475,
   CANVAS_WIDTH: 940,
   FPS: 1 / 60,
+  GRAVITY: 1500,
 };
 const marcoConstants = {
   WIDTH: 80,
   HEIGHT: 95,
   VELOCITY_X: 200,
   VELOCITY_Y: -600,
-  GRAVITY: 1500,
   INIT_POS_X: 64,
 };
 const soldierConsts = {
@@ -23,6 +23,8 @@ const prisonerConsts = {
 const dirConsts = {
   TOP: "top",
   BOTTOM: "bottom",
+  LEFT: "left",
+  RIGHT: "right",
 };
 
 const platFormConsts = {

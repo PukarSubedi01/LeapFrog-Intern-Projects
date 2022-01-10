@@ -18,16 +18,18 @@ export default class Entity {
     this[trait.NAME] = trait;
   }
   collides(candidate) {
-    console.log(candidate);
-  }
-  obstruct(side) {
     this.traits.forEach((trait) => {
-      trait.obstruct(this, side);
+      trait.collides(this, candidate);
     });
   }
-  update(deltaTime) {
+  obstruct(side, match) {
     this.traits.forEach((trait) => {
-      trait.update(this, deltaTime);
+      trait.obstruct(this, side, match);
+    });
+  }
+  update(deltaTime, level) {
+    this.traits.forEach((trait) => {
+      trait.update(this, deltaTime, level);
     });
     this.alivePeriod += deltaTime;
   }
@@ -37,7 +39,6 @@ export class Trait {
     this.NAME = name;
   }
   obstruct() {}
-  update() {
-    console.warn("Unhandled update call in trait");
-  }
+  collides(otherEntities, player) {}
+  update() {}
 }

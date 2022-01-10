@@ -1,0 +1,23 @@
+{
+  "imageUrl": "./assets/mission1/weapons.png",
+  "frames": [
+    {
+      "name": "machinegun-bullet",
+      "props": {
+        "x": 240,
+        "y": 306,
+        "subSetElementWidth": 35,
+        "subsetElementHeight": 20,
+        "width": 40,
+        "height": 20
+      }
+    }
+  ],
+  "animations": [
+    {
+      "name": "bullet",
+      "frameLen": 10,
+      "frames": ["machinegun-bullet"]
+    }
+  ]
+}

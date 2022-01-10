@@ -1,15 +1,17 @@
 import KeyboardState from "./keyboardState.js";
 export function controller(entity) {
   const input = new KeyboardState();
-
   input.addMapping("Space", (keyState) => {
+    console.log(keyState);
     if (keyState) {
       entity.jump.start();
     } else {
       entity.jump.cancel();
     }
   });
-
+  input.addMapping("Enter", (keyState) => {
+    entity.shoot.shootingState(keyState);
+  });
   input.addMapping("ArrowRight", (keyState) => {
     entity.walk.dir += keyState ? 1 : -1;
   });

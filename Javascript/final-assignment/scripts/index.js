@@ -21,15 +21,12 @@ async function main(canvas) {
   const entityFactory = await loadEntities();
   const loadLevel = await createLevelLoader(entityFactory);
   const level = await loadLevel("mission1");
-
   const cam = new Camera();
   window.camera = cam;
   const marco = entityFactory.marco();
+  const machineGunBullet = entityFactory.machineGunBullet();
 
-  marco.pos.set(
-    marcoConstants.INIT_POS_X,
-    constantVals.CANVAS_HEIGHT - marcoConstants.HEIGHT
-  );
+  marco.pos.set(marcoConstants.INIT_POS_X, 0);
 
   level.comp.layers.push(createCameraLayer(cam));
   level.entities.add(marco);
@@ -46,7 +43,7 @@ async function main(canvas) {
   };
 
   fpsCalc.start();
-  mouseDebugger(canvas, marco, cam);
+  mouseDebugger(canvas, machineGunBullet, cam);
 
   const input = controller(marco);
   input.listenTo(window);

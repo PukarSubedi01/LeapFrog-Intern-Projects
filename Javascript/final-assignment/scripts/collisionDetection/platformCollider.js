@@ -29,13 +29,11 @@ export default class PlatformCollider {
       }
       if (entity.vel.x > 0) {
         if (entity.bounds.right > match.x1) {
-          entity.bounds.left = match.x1;
-          entity.vel.x = 0;
+          entity.obstruct(dirConsts.RIGHT, match);
         }
       } else if (entity.vel.x < 0) {
         if (entity.bounds.left < match.x2) {
-          entity.bounds.left = match.x2;
-          entity.vel.x = 0;
+          entity.obstruct(dirConsts.LEFT, match);
         }
       }
     });
@@ -63,9 +61,7 @@ export default class PlatformCollider {
       }
       if (entity.vel.y > 0) {
         if (entity.bounds.bottom > match.y1) {
-          entity.bounds.top = match.y1;
-          entity.vel.y = 0;
-          entity.obstruct(dirConsts.BOTTOM);
+          entity.obstruct(dirConsts.BOTTOM, match);
         }
       }
       // else if (entity.vel.y < 0) {
@@ -73,7 +69,7 @@ export default class PlatformCollider {
       //   if (entity.bounds.top < match.y2) {
       //     entity.bounds.top = match.y2;
       //     entity.vel.y = 0;
-      //     entity.obstruct(dirConsts.TOP);
+      //     entity.obstruct(dirConsts.TOP, match);
       //   }
       // }
     });

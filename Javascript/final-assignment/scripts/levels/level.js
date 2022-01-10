@@ -2,7 +2,7 @@ import LayerCompositor from "../layers/layerCompositor.js";
 import { Matrix } from "../calculations/calculations.js";
 import PlatformCollider from "../collisionDetection/platformCollider.js";
 import EntityCollider from "../collisionDetection/entityCollider.js";
-import { marcoConstants } from "../constants.js";
+import { constantVals, marcoConstants } from "../constants.js";
 export default class Level {
   constructor() {
     this.comp = new LayerCompositor();
@@ -13,17 +13,18 @@ export default class Level {
   }
   update(deltaTime) {
     this.entities.forEach((entity) => {
-      entity.update(deltaTime);
+      entity.update(deltaTime, this);
 
-      entity.pos.x += entity.vel.x * deltaTime;
-      this.platformCollider.checkX(entity);
+      // entity.pos.x += entity.vel.x * deltaTime;
+      // this.platformCollider.checkX(entity);
 
-      entity.pos.y += entity.vel.y * deltaTime;
-      this.platformCollider.checkY(entity);
+      // entity.pos.y += entity.vel.y * deltaTime;
+      // this.platformCollider.checkY(entity);
 
+      // entity.vel.y += constantVals.GRAVITY * deltaTime;
+    });
+    this.entities.forEach((entity) => {
       this.entityCollider.check(entity);
-
-      entity.vel.y += marcoConstants.GRAVITY * deltaTime;
     });
   }
 }

@@ -4,6 +4,8 @@ import Jump from "../traits/jump.js";
 import Walk from "../traits/walk.js";
 import { prisonerConsts } from "../constants.js";
 import { loadSpriteSheet } from "../loaders.js";
+import CollisionObject from "../traits/collisionObject.js";
+import Movements from "../traits/movements.js";
 
 export function loadPrisoners() {
   return loadSpriteSheet("prisoners").then(createPrisonersFactory);
@@ -27,6 +29,8 @@ function createPrisonersFactory(sprite) {
     //     prisoner.vel.x = this.speed;
     //   },
     // });
+    prisoner.addTrait(new Movements());
+    prisoner.addTrait(new CollisionObject());
     prisoner.draw = drawPrisoners;
     return prisoner;
   };
