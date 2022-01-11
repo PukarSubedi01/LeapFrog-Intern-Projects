@@ -83,11 +83,17 @@ function setupBackgrounds(levelSpec, level, backgroundSprites) {
   level.comp.layers.push(bgLayer);
 }
 function setupEntities(levelSpec, level, entityFactory) {
-  levelSpec.entities.forEach(({ name, pos: [x, y] }) => {
-    const createEntity = entityFactory[name];
-    const entity = createEntity();
-    entity.pos.set(x, y);
-    level.entities.add(entity);
+  levelSpec.entities.forEach(({ name, position }) => {
+    position.forEach(([x, y]) => {
+      const createEntity = entityFactory[name];
+      const entity = createEntity();
+      entity.pos.set(x, y);
+      level.entities.add(entity);
+    });
+    // const createEntity = entityFactory[name];
+    // const entity = createEntity();
+    // entity.pos.set(x, y);
+    // level.entities.add(entity);
   });
 
   const spriteLayer = createSpriteLayer(level.entities);

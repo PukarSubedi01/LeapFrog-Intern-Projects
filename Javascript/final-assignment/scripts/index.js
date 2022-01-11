@@ -1,9 +1,4 @@
-import {
-  constantVals,
-  marcoConstants,
-  soldierConsts,
-  prisonerConsts,
-} from "./constants.js";
+import { constantVals } from "./constants.js";
 import { createLevelLoader } from "./loaders.js";
 import { loadEntities } from "./entities/entityLoader.js";
 import AccuracyCalc from "./calculations/accuracyCalc.js";
