@@ -2,7 +2,6 @@ import KeyboardState from "./keyboardState.js";
 export function controller(entity) {
   const input = new KeyboardState();
   input.addMapping("Space", (keyState) => {
-    console.log(keyState);
     if (keyState) {
       entity.jump.start();
     } else {

@@ -5,7 +5,7 @@ export default class Shoot extends Trait {
     this.interval = 0.2;
     this.canShoot = false;
     this.coolDown = this.interval;
-
+    this.dir = 1;
     this.bullets = [];
   }
   shoot(entity, level) {
@@ -22,6 +22,7 @@ export default class Shoot extends Trait {
   }
   update(entity, deltaTime, level) {
     this.coolDown -= deltaTime;
+
     if (this.coolDown <= 0 && this.canShoot) {
       this.shoot(entity, level);
       this.coolDown = this.interval;

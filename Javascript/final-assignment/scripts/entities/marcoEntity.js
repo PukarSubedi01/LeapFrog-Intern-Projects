@@ -31,7 +31,19 @@ function createMarcoFactory(sprite, entityFactory) {
   }
   function shootBullets(entity, level) {
     const bullet = entityFactory.machineGunBullet();
-    bullet.pos.set(0, 0);
+    const bulletDirection = entity.walk.heading;
+
+    if (bulletDirection === 1) {
+      bullet.pos.set(
+        entity.pos.x + entity.size.x,
+        entity.pos.y + entity.size.x / 2
+      );
+    } else if (bulletDirection === -1) {
+      bullet.pos.set(entity.pos.x, entity.pos.y + entity.size.x / 2);
+    }
+
+    bullet.travel.direction = entity.walk.heading;
+
     level.entities.add(bullet);
   }
 
