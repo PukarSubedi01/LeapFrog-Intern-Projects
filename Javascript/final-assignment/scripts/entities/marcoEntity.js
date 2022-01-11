@@ -42,8 +42,8 @@ function createMarcoFactory(sprite, entityFactory) {
     } else if (bulletDirection === -1) {
       bullet.pos.set(entity.pos.x, entity.pos.y + entity.size.x / 2);
     }
-
     bullet.travel.direction = entity.walk.heading;
+    bullet.travel.initialBulletPosX = entity.pos.x;
 
     level.entities.add(bullet);
   }
