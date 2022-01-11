@@ -33,6 +33,7 @@ export default class Entity {
     });
     this.alivePeriod += deltaTime;
   }
+  draw() {}
 }
 export class Trait {
   constructor(name) {

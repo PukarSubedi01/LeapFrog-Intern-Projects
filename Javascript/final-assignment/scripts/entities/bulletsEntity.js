@@ -1,6 +1,7 @@
 import Entity from "./entity.js";
 import { loadSpriteSheet } from "../loaders.js";
 import Travel from "../traits/travel.js";
+import CanKill from "../traits/canKill.js";
 export function loadMachineGunBullet() {
   return loadSpriteSheet("machineGunBullet").then(createWeaponsFactory);
 }
@@ -15,6 +16,7 @@ function createWeaponsFactory(sprite) {
     machineGunBullet.size.set(40, 20);
     machineGunBullet.vel.set(1000, 0);
     machineGunBullet.addTrait(new Travel());
+    machineGunBullet.addTrait(new CanKill());
     machineGunBullet.draw = drawMachineGunBullet;
 
     return machineGunBullet;

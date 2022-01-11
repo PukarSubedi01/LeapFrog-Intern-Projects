@@ -55,13 +55,13 @@ function createMarcoFactory(sprite, entityFactory) {
     shoot.bullets.push(shootBullets);
 
     marco.addTrait(shoot);
-
+    marco.addTrait(new Killable());
+    marco.killable.removeEntityAfter = 0;
     marco.addTrait(new CollisionObject());
     marco.addTrait(new Movements());
     marco.addTrait(new Walk());
     marco.addTrait(new Jump());
     marco.addTrait(shoot);
-    marco.addTrait(new Killable());
     marco.draw = drawMarco;
 
     return marco;

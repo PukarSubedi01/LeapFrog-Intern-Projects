@@ -11,10 +11,25 @@ class Behaviour extends Trait {
   constructor() {
     super("behaviour");
   }
-  collides(soldier, player) {
-    if (player.shoot) {
+  collides(soldier, otherEntities) {
+    if (soldier.killable.isDead) {
+      return;
+    }
+    this.killSoldiers(soldier, otherEntities);
+    this.killMarco(soldier, otherEntities);
+  }
+
+  killSoldiers(soldier, bullets) {
+    if (bullets.canKill) {
+      console.log(bullets);
       soldier.killable.kill();
+      bullets.canKill.setDestruct();
       soldier.walk.speed = 0;
+    }
+  }
+  killMarco(soldier, marco) {
+    if (marco.killable) {
+      marco.killable.kill();
     }
   }
 }
@@ -27,7 +42,7 @@ function createSoldiersFactory(sprite) {
 
   function animationRoute(soldier) {
     if (soldier.killable.isDead) {
-      return "soldier1";
+      return "soldier1"; //animate soldier after death
     }
     return animateFrame(soldier.alivePeriod);
   }
