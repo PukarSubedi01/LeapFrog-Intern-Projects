@@ -14,11 +14,15 @@ function createWeaponsFactory(sprite) {
     const machineGunBullet = new Entity();
     machineGunBullet.size.set(40, 20);
     machineGunBullet.vel.set(1000, 0);
+
     const travel = new Travel();
     travel.firingRange = 800;
 
+    const canKill = new CanKill();
+    canKill.damage = 50;
+
     machineGunBullet.addTrait(travel);
-    machineGunBullet.addTrait(new CanKill());
+    machineGunBullet.addTrait(canKill);
     machineGunBullet.draw = drawMachineGunBullet;
 
     return machineGunBullet;

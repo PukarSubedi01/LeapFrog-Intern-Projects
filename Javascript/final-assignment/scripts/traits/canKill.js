@@ -3,6 +3,7 @@ export default class CanKill extends Trait {
   constructor() {
     super("canKill");
     this.destruct = false;
+    this.damage = 0;
   }
   setDestruct() {
     this.destruct = true;

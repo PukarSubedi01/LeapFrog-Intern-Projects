@@ -1,6 +1,7 @@
 import Entity from "./entity.js";
 import Killable from "../traits/killable.js";
 import Walk from "../traits/walk.js";
+import CanKnife from "../traits/canKnife.js";
 import { constantVals, soldierConsts } from "../constants.js";
 import { loadSpriteSheet } from "../loaders.js";
 import { Trait } from "./entity.js";
@@ -10,13 +11,18 @@ import Movements from "../traits/movements.js";
 class Behaviour extends Trait {
   constructor() {
     super("behaviour");
+    this.countHandler = 0;
   }
   collides(soldier, otherEntities) {
     if (soldier.killable.isDead) {
+      this.countHandler++;
+      if (this.countHandler === 1) {
+        soldier.walk.speed = 0;
+        soldier.walk.dir = 0;
+      }
       return;
     }
     this.killSoldiers(soldier, otherEntities);
-    this.killMarco(soldier, otherEntities);
   }
   follow(soldier, otherEntities) {
     if (otherEntities.canBefollowed) {
@@ -24,7 +30,17 @@ class Behaviour extends Trait {
 
       if (diffX > -constantVals.CANVAS_WIDTH) {
         soldier.walk.speed = 8000;
-        if (soldier.killable.isDead) return;
+        if (soldier.killable.isDead) {
+          if (diffX > 0) {
+            soldier.walk.heading = -1;
+          } else {
+            soldier.walk.heading = 1;
+          }
+
+          soldier.walk.speed = 0;
+          soldier.walk.dir = 0;
+          return;
+        }
         if (diffX > 0) {
           soldier.walk.dir = 1;
           soldier.walk.heading = -1;
@@ -38,17 +54,8 @@ class Behaviour extends Trait {
 
   killSoldiers(soldier, bullets) {
     if (bullets.canKill) {
-      soldier.killable.kill();
+      soldier.killable.attack(bullets.canKill.damage);
       bullets.canKill.setDestruct();
-      console.log(soldier.walk.heading);
-      soldier.walk.heading *= -1;
-      soldier.walk.speed = 0;
-      soldier.walk.dir = 0;
-    }
-  }
-  killMarco(soldier, marco) {
-    if (marco.killable) {
-      marco.killable.kill();
     }
   }
 }
@@ -91,6 +98,7 @@ function createSoldiersFactory(sprite) {
     // };
 
     soldier.addTrait(new Walk());
+    soldier.addTrait(new CanKnife());
     soldier.addTrait(new CollisionObject());
     soldier.addTrait(new Movements());
     soldier.addTrait(new Behaviour());
