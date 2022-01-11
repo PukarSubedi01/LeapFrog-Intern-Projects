@@ -8,6 +8,7 @@ import Shoot from "../traits/shoot.js";
 import Killable from "../traits/killable.js";
 import Movements from "../traits/movements.js";
 import CollisionObject from "../traits/collisionObject.js";
+import CanBeFollowed from "../traits/canBeFollowed.js";
 
 export function loadMarco(entityFactory) {
   return Promise.all([loadSpriteSheet("marco")]).then(([sprite]) => {
@@ -62,6 +63,7 @@ function createMarcoFactory(sprite, entityFactory) {
     marco.addTrait(new Walk());
     marco.addTrait(new Jump());
     marco.addTrait(shoot);
+    marco.addTrait(new CanBeFollowed());
     marco.draw = drawMarco;
 
     return marco;

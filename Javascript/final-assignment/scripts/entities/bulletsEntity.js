@@ -7,7 +7,6 @@ export function loadMachineGunBullet() {
 }
 function createWeaponsFactory(sprite) {
   function drawMachineGunBullet(context) {
-    console.log(this.travel.direction);
     sprite.draw("machinegun-bullet", context, 0, 0, this.travel.direction < 0);
   }
 

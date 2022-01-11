@@ -1,7 +1,7 @@
 import Entity from "./entity.js";
 import Killable from "../traits/killable.js";
 import Walk from "../traits/walk.js";
-import { soldierConsts } from "../constants.js";
+import { constantVals, soldierConsts } from "../constants.js";
 import { loadSpriteSheet } from "../loaders.js";
 import { Trait } from "./entity.js";
 import CollisionObject from "../traits/collisionObject.js";
@@ -18,13 +18,32 @@ class Behaviour extends Trait {
     this.killSoldiers(soldier, otherEntities);
     this.killMarco(soldier, otherEntities);
   }
+  follow(soldier, otherEntities) {
+    if (otherEntities.canBefollowed) {
+      let diffX = otherEntities.pos.x - soldier.pos.x;
+
+      if (diffX > -constantVals.CANVAS_WIDTH) {
+        soldier.walk.speed = 8000;
+        if (soldier.killable.isDead) return;
+        if (diffX > 0) {
+          soldier.walk.dir = 1;
+          soldier.walk.heading = -1;
+        } else {
+          soldier.walk.heading = 1;
+          soldier.walk.dir = -1;
+        }
+      }
+    }
+  }
 
   killSoldiers(soldier, bullets) {
     if (bullets.canKill) {
-      console.log(bullets);
       soldier.killable.kill();
       bullets.canKill.setDestruct();
+      console.log(soldier.walk.heading);
+      soldier.walk.heading *= -1;
       soldier.walk.speed = 0;
+      soldier.walk.dir = 0;
     }
   }
   killMarco(soldier, marco) {
@@ -48,11 +67,12 @@ function createSoldiersFactory(sprite) {
   }
 
   function drawSoldiers(context) {
-    sprite.draw(animationRoute(this), context, 0, 0);
+    sprite.draw(animationRoute(this), context, 0, 0, this.walk.heading < 0);
     // sprite.draw("soldier12", context, 0, 0);
   }
   return function createSoldier() {
     const soldier = new Entity();
+
     soldier.size.set(soldierConsts.WIDTH, soldierConsts.HEIGHT);
 
     // soldier.addTrait({
@@ -64,13 +84,13 @@ function createSoldiersFactory(sprite) {
     //     soldier.vel.x = this.speed;
     //   },
     // });
-    const walk = new Walk();
-    walk.speed = -30;
-    walk.update = (soldier) => {
-      soldier.vel.x = walk.speed;
-    };
+    // const walk = new Walk();
+    // walk.speed = -30;
+    // walk.update = (soldier) => {
+    //   soldier.vel.x = walk.speed;
+    // };
 
-    soldier.addTrait(walk);
+    soldier.addTrait(new Walk());
     soldier.addTrait(new CollisionObject());
     soldier.addTrait(new Movements());
     soldier.addTrait(new Behaviour());

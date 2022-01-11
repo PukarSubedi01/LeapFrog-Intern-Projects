@@ -22,6 +22,11 @@ export default class Entity {
       trait.collides(this, candidate);
     });
   }
+  follow(candidate) {
+    this.traits.forEach((trait) => {
+      trait.follow(this, candidate);
+    });
+  }
   obstruct(side, match) {
     this.traits.forEach((trait) => {
       trait.obstruct(this, side, match);
@@ -40,6 +45,8 @@ export class Trait {
     this.NAME = name;
   }
   obstruct() {}
-  collides(otherEntities, player) {}
+  collides(currentEntity, otherEntity) {}
+  follow(currentEntity, otherEntity) {}
+
   update() {}
 }
