@@ -9,7 +9,7 @@ import Killable from "../traits/killable.js";
 import Movements from "../traits/movements.js";
 import CollisionObject from "../traits/collisionObject.js";
 import CanBeFollowed from "../traits/canBeFollowed.js";
-
+import CanRelease from "../traits/canRelease.js";
 class Behaviour extends Trait {
   constructor() {
     super("behaviour");
@@ -73,10 +73,12 @@ function createMarcoFactory(sprite, entityFactory) {
     marco.killable.removeEntityAfter = 0;
     marco.addTrait(new CollisionObject());
     marco.addTrait(new Movements());
+
     marco.addTrait(new Walk());
     marco.addTrait(new Jump());
     marco.addTrait(shoot);
     marco.addTrait(new CanBeFollowed());
+    marco.addTrait(new CanRelease());
     marco.addTrait(new Behaviour());
     marco.draw = drawMarco;
 

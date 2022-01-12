@@ -12,6 +12,7 @@ export default class PlayerController extends Trait {
   update(entity, deltaTime, level) {
     if (!level.entities.has(this.player)) {
       this.player.killable.revive();
+      this.player.killable.health = 100;
       this.player.pos.set(this.checkpoint.x, this.checkpoint.y);
       level.entities.add(this.player);
     }
