@@ -3,6 +3,7 @@ import { loadSoldiers } from "./soldiersEntity.js";
 import { loadPrisoners } from "./prisonersEntity.js";
 import { loadMachineGunBullet } from "./bulletsEntity.js";
 import { loadElement } from "./elements.js";
+import { loadTank } from "./tank.js";
 
 export function loadEntities() {
   const entityFactories = {};
@@ -15,5 +16,6 @@ export function loadEntities() {
     loadPrisoners(entityFactories).then(addEntityAs("prisoners")),
     loadMachineGunBullet().then(addEntityAs("machineGunBullet")),
     loadElement().then(addEntityAs("compensationElement")),
+    loadTank().then(addEntityAs("tank")),
   ]).then(() => entityFactories);
 }

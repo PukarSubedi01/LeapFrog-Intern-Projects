@@ -1,0 +1,16 @@
+{
+  "imageUrl": "./assets/mission1/vehicles.gif",
+  "frames": [
+    {
+      "name": "tank",
+      "props": {
+        "x": 336,
+        "y": 3,
+        "subSetElementWidth": 63,
+        "subsetElementHeight": 63,
+        "width": 130,
+        "height": 140
+      }
+    }
+  ]
+}
