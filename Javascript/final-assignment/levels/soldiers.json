@@ -132,6 +132,138 @@
         "width": 62,
         "height": 90
       }
+    },
+    {
+      "name": "knife1",
+      "props": {
+        "x": 192,
+        "y": 702,
+        "subSetElementWidth": 30,
+        "subsetElementHeight": 41,
+        "width": 66,
+        "height": 90
+      }
+    },
+    {
+      "name": "knife2",
+      "props": {
+        "x": 223,
+        "y": 702,
+        "subSetElementWidth": 30,
+        "subsetElementHeight": 41,
+        "width": 66,
+        "height": 90
+      }
+    },
+    {
+      "name": "knife3",
+      "props": {
+        "x": 259,
+        "y": 702,
+        "subSetElementWidth": 30,
+        "subsetElementHeight": 41,
+        "width": 66,
+        "height": 90
+      }
+    },
+    {
+      "name": "knife4",
+      "props": {
+        "x": 292,
+        "y": 702,
+        "subSetElementWidth": 30,
+        "subsetElementHeight": 41,
+        "width": 66,
+        "height": 90
+      }
+    },
+    {
+      "name": "knife5",
+      "props": {
+        "x": 326,
+        "y": 702,
+        "subSetElementWidth": 30,
+        "subsetElementHeight": 41,
+        "width": 66,
+        "height": 90
+      }
+    },
+    {
+      "name": "knife6",
+      "props": {
+        "x": 360,
+        "y": 702,
+        "subSetElementWidth": 30,
+        "subsetElementHeight": 41,
+        "width": 66,
+        "height": 90
+      }
+    },
+    {
+      "name": "knife7",
+      "props": {
+        "x": 400,
+        "y": 702,
+        "subSetElementWidth": 30,
+        "subsetElementHeight": 41,
+        "width": 66,
+        "height": 90
+      }
+    },
+    {
+      "name": "knife8",
+      "props": {
+        "x": 440,
+        "y": 702,
+        "subSetElementWidth": 30,
+        "subsetElementHeight": 41,
+        "width": 66,
+        "height": 90
+      }
+    },
+    {
+      "name": "knife9",
+      "props": {
+        "x": 480,
+        "y": 702,
+        "subSetElementWidth": 34,
+        "subsetElementHeight": 41,
+        "width": 70,
+        "height": 90
+      }
+    },
+    {
+      "name": "knife10",
+      "props": {
+        "x": 522,
+        "y": 702,
+        "subSetElementWidth": 46,
+        "subsetElementHeight": 41,
+        "width": 82,
+        "height": 90
+      }
+    },
+    {
+      "name": "knife11",
+      "props": {
+        "x": 575,
+        "y": 702,
+        "subSetElementWidth": 54,
+        "subsetElementHeight": 41,
+        "width": 87,
+        "height": 90
+      }
+    },
+    {
+      "name": "knife12",
+      "props": {
+        "x": 633,
+        "y": 702,
+        "subSetElementWidth": 54,
+        "subsetElementHeight": 41,
+        "width": 87,
+        "height": 90
+      }
     }
   ],
   "animations": [
@@ -151,6 +283,24 @@
         "soldier10",
         "soldier11",
         "soldier12"
+      ]
+    },
+    {
+      "name": "knife",
+      "frameLen": 0.09,
+      "frames": [
+        "knife1",
+        "knife2",
+        "knife3",
+        "knife4",
+        "knife5",
+        "knife6",
+        "knife7",
+        "knife8",
+        "knife9",
+        "knife10",
+        "knife11",
+        "knife12"
       ]
     }
   ]

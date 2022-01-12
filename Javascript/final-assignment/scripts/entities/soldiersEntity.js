@@ -14,6 +14,10 @@ class Behaviour extends Trait {
     this.countHandler = 0;
   }
   collides(soldier, otherEntities) {
+    if (otherEntities.canRelease) {
+      soldier.canKnife.attack();
+    }
+
     if (soldier.killable.isDead) {
       this.countHandler++;
       if (this.countHandler === 1) {
@@ -30,11 +34,11 @@ class Behaviour extends Trait {
 
       if (diffX > -constantVals.CANVAS_WIDTH) {
         soldier.walk.speed = 8000;
-        if (soldier.killable.isDead) {
+        if (soldier.killable.isDead || soldier.canKnife.isAttacking) {
           if (diffX > 0) {
-            soldier.walk.heading = -1;
-          } else {
             soldier.walk.heading = 1;
+          } else {
+            soldier.walk.heading = -1;
           }
 
           soldier.walk.speed = 0;
@@ -65,11 +69,15 @@ export function loadSoldiers() {
 }
 function createSoldiersFactory(sprite) {
   const animateFrame = sprite.animations.get("run");
-
+  const animateKnifing = sprite.animations.get("knife");
   function animationRoute(soldier) {
     if (soldier.killable.isDead) {
       return "soldier1"; //animate soldier after death
     }
+    if (soldier.canKnife.isAttacking) {
+      return animateKnifing(soldier.alivePeriod);
+    }
+
     return animateFrame(soldier.alivePeriod);
   }
 

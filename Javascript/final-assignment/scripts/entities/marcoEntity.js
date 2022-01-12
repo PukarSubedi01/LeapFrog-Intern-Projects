@@ -10,6 +10,7 @@ import Movements from "../traits/movements.js";
 import CollisionObject from "../traits/collisionObject.js";
 import CanBeFollowed from "../traits/canBeFollowed.js";
 import CanRelease from "../traits/canRelease.js";
+import GetInside from "../traits/getInside.js";
 class Behaviour extends Trait {
   constructor() {
     super("behaviour");
@@ -74,6 +75,7 @@ function createMarcoFactory(sprite, entityFactory) {
     marco.addTrait(new CollisionObject());
     marco.addTrait(new Movements());
 
+    marco.addTrait(new GetInside());
     marco.addTrait(new Walk());
     marco.addTrait(new Jump());
     marco.addTrait(shoot);

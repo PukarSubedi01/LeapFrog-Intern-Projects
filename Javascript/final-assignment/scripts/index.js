@@ -30,7 +30,6 @@ async function main(canvas) {
   const cam = new Camera();
   window.camera = cam;
   const marco = entityFactory.marco();
-  const machineGunBullet = entityFactory.machineGunBullet();
 
   const playerEnv = createPlayerEnv(marco);
   level.entities.add(playerEnv);
@@ -47,7 +46,7 @@ async function main(canvas) {
   };
 
   fpsCalc.start();
-  mouseDebugger(canvas, machineGunBullet, cam);
+  mouseDebugger(canvas, marco, cam);
 
   const input = controller(marco);
   input.listenTo(window);
