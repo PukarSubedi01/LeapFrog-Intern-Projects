@@ -24,12 +24,12 @@ class Behaviour extends Trait {
   }
   collides(prisoner, otherEntities) {
     if (otherEntities.canRelease) {
-      if (this.state === STATE_TIED) prisoner.alivePeriod = 0;
       this.handleRelease(prisoner, otherEntities);
     }
   }
   handleRelease(prisoner, marco) {
     if (this.state === STATE_TIED) {
+      prisoner.alivePeriod = 0;
       prisoner.canBeReleased.setReleased();
       this.state = STATE_RELEASED;
     }

@@ -10,6 +10,8 @@ export default class Entity {
     this.size = new PositionVectors(0, 0);
     this.offset = new PositionVectors(0, 0);
     this.alivePeriod = 0;
+    this.deathPeriod = 0;
+    this.isDead = false;
     this.bounds = new BoundingBox(this.pos, this.size, this.offset);
     this.traits = [];
   }
@@ -37,6 +39,7 @@ export default class Entity {
       trait.update(this, deltaTime, level);
     });
     this.alivePeriod += deltaTime;
+    if (this.isDead) this.deathPeriod += deltaTime;
   }
   draw() {}
 }

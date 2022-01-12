@@ -264,6 +264,116 @@
         "width": 87,
         "height": 90
       }
+    },
+    {
+      "name": "dead1",
+      "props": {
+        "x": 378,
+        "y": 646,
+        "subSetElementWidth": 30,
+        "subsetElementHeight": 41,
+        "width": 66,
+        "height": 90
+      }
+    },
+    {
+      "name": "dead2",
+      "props": {
+        "x": 416,
+        "y": 646,
+        "subSetElementWidth": 34,
+        "subsetElementHeight": 41,
+        "width": 70,
+        "height": 90
+      }
+    },
+    {
+      "name": "dead3",
+      "props": {
+        "x": 454,
+        "y": 646,
+        "subSetElementWidth": 40,
+        "subsetElementHeight": 41,
+        "width": 76,
+        "height": 90
+      }
+    },
+    {
+      "name": "dead4",
+      "props": {
+        "x": 500,
+        "y": 646,
+        "subSetElementWidth": 40,
+        "subsetElementHeight": 41,
+        "width": 76,
+        "height": 90
+      }
+    },
+    {
+      "name": "dead5",
+      "props": {
+        "x": 548,
+        "y": 646,
+        "subSetElementWidth": 43,
+        "subsetElementHeight": 41,
+        "width": 79,
+        "height": 90
+      }
+    },
+    {
+      "name": "dead6",
+      "props": {
+        "x": 598,
+        "y": 640,
+        "subSetElementWidth": 43,
+        "subsetElementHeight": 48,
+        "width": 79,
+        "height": 94
+      }
+    },
+    {
+      "name": "dead7",
+      "props": {
+        "x": 650,
+        "y": 640,
+        "subSetElementWidth": 53,
+        "subsetElementHeight": 48,
+        "width": 89,
+        "height": 94
+      }
+    },
+    {
+      "name": "dead8",
+      "props": {
+        "x": 705,
+        "y": 640,
+        "subSetElementWidth": 53,
+        "subsetElementHeight": 48,
+        "width": 89,
+        "height": 94
+      }
+    },
+    {
+      "name": "dead9",
+      "props": {
+        "x": 764,
+        "y": 640,
+        "subSetElementWidth": 53,
+        "subsetElementHeight": 48,
+        "width": 89,
+        "height": 94
+      }
+    },
+    {
+      "name": "dead10",
+      "props": {
+        "x": 823,
+        "y": 640,
+        "subSetElementWidth": 53,
+        "subsetElementHeight": 48,
+        "width": 89,
+        "height": 94
+      }
     }
   ],
   "animations": [
@@ -301,6 +411,21 @@
         "knife10",
         "knife11",
         "knife12"
+      ]
+    },
+    {
+      "name": "death",
+      "frameLen": 0.22,
+      "frames": [
+        "dead2",
+        "dead3",
+        "dead4",
+        "dead5",
+        "dead6",
+        "dead7",
+        "dead8",
+        "dead9",
+        "dead10"
       ]
     }
   ]

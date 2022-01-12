@@ -19,6 +19,7 @@ class Behaviour extends Trait {
     }
 
     if (soldier.killable.isDead) {
+      soldier.isDead = true;
       this.countHandler++;
       if (this.countHandler === 1) {
         soldier.walk.speed = 0;
@@ -34,7 +35,7 @@ class Behaviour extends Trait {
 
       if (diffX > -constantVals.CANVAS_WIDTH) {
         soldier.walk.speed = 8000;
-        if (soldier.killable.isDead || soldier.canKnife.isAttacking) {
+        if (soldier.isDead || soldier.canKnife.isAttacking) {
           if (diffX > 0) {
             soldier.walk.heading = 1;
           } else {
@@ -70,9 +71,10 @@ export function loadSoldiers() {
 function createSoldiersFactory(sprite) {
   const animateFrame = sprite.animations.get("run");
   const animateKnifing = sprite.animations.get("knife");
+  const animateDeath = sprite.animations.get("death");
   function animationRoute(soldier) {
-    if (soldier.killable.isDead) {
-      return "soldier1"; //animate soldier after death
+    if (soldier.isDead) {
+      return animateDeath(soldier.deathPeriod);
     }
     if (soldier.canKnife.isAttacking) {
       return animateKnifing(soldier.alivePeriod);
@@ -83,7 +85,6 @@ function createSoldiersFactory(sprite) {
 
   function drawSoldiers(context) {
     sprite.draw(animationRoute(this), context, 0, 0, this.walk.heading < 0);
-    // sprite.draw("soldier12", context, 0, 0);
   }
   return function createSoldier() {
     const soldier = new Entity();
