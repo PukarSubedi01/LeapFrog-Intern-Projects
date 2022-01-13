@@ -10,12 +10,23 @@ export default class Travel extends Trait {
 
   update(entity, deltaTime, level) {
     this.maxTravelDistance = this.initialBulletPosX + this.firingRange;
-    if (entity.pos.x < this.maxTravelDistance) {
-      entity.pos.x += entity.vel.x * deltaTime * this.direction;
 
-      entity.pos.y += entity.vel.y * deltaTime;
-    } else {
-      level.entities.delete(entity);
+    if (this.direction === 1) {
+      if (entity.pos.x < this.maxTravelDistance) {
+        entity.pos.x += entity.vel.x * deltaTime * this.direction;
+
+        entity.pos.y += entity.vel.y * deltaTime;
+      } else {
+        level.entities.delete(entity);
+      }
+    } else if (this.direction === -1) {
+      if (entity.pos.x > -this.maxTravelDistance) {
+        entity.pos.x += entity.vel.x * deltaTime * this.direction;
+
+        entity.pos.y += entity.vel.y * deltaTime;
+      } else {
+        level.entities.delete(entity);
+      }
     }
   }
 }
