@@ -4,7 +4,6 @@ import { loadEntities } from "./entities/entityLoader.js";
 import AccuracyCalc from "./calculations/accuracyCalc.js";
 import { controller, mouseDebugger } from "./controls/controller.js";
 import Camera from "./camera.js";
-import { createCameraLayer } from "./layers/layers.js";
 import Entity from "./entities/entity.js";
 import PlayerController from "./traits/playerController.js";
 
@@ -33,8 +32,6 @@ async function main(canvas) {
 
   const playerEnv = createPlayerEnv(marco);
   level.entities.add(playerEnv);
-
-  level.comp.layers.push(createCameraLayer(cam));
 
   const fpsCalc = new AccuracyCalc(1 / 60);
 

@@ -1,10 +1,8 @@
 import Level from "./levels/level.js";
 import SpriteSheetParser from "./sprites/spriteSheetParser.js";
-import {
-  createBackgroundLayer,
-  createSpriteLayer,
-  createPlatformLayer,
-} from "./layers/layers.js";
+import { createSpriteLayer } from "./layers/spriteLayer.js";
+import { createBackgroundLayer } from "./layers/backgroundLayer.js";
+import { createPlatformLayer } from "./layers/platformLayer.js";
 import { loadPlatform } from "./sprites/spriteLoaders.js";
 import createAnimation from "./animations/animate.js";
 

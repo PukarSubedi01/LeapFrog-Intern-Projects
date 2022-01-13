@@ -2,7 +2,14 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 0;
+  background: black;
+  image-rendering: pixelated;
+  height: 100vh;
 }
 .game-wrapper canvas {
-  /* background-color: black; */
+  display: block;
+  image-rendering: pixelated;
+  margin: auto;
+  height: 80vh;
 }
