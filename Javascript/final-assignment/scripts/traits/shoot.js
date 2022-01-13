@@ -25,6 +25,9 @@ export default class Shoot extends Trait {
   update(entity, deltaTime, level) {
     this.coolDown -= deltaTime;
     if (this.coolDown <= 0 && this.canShoot && this.defaultGun) {
+      const audio = new Audio();
+      audio.src = "../assets/sfx/bullets-firing.mp3";
+      audio.play();
       this.shoot(entity, level, this.machineGunBullets);
       this.coolDown = this.interval;
     } else if (this.coolDown <= 0 && this.canShoot && !this.defaultGun) {
