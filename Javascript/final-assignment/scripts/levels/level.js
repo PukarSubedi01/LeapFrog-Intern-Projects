@@ -16,14 +16,6 @@ export default class Level {
   update(deltaTime) {
     this.entities.forEach((entity) => {
       entity.update(deltaTime, this);
-
-      // entity.pos.x += entity.vel.x * deltaTime;
-      // this.platformCollider.checkX(entity);
-
-      // entity.pos.y += entity.vel.y * deltaTime;
-      // this.platformCollider.checkY(entity);
-
-      // entity.vel.y += constantVals.GRAVITY * deltaTime;
     });
     this.entities.forEach((entity) => {
       this.entityCollider.check(entity);

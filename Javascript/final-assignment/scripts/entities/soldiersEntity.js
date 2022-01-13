@@ -92,21 +92,6 @@ function createSoldiersFactory(sprite) {
 
     soldier.size.set(soldierConsts.WIDTH, soldierConsts.HEIGHT);
 
-    // soldier.addTrait({
-    //   NAME: "walk",
-    //   speed: -30,
-    //   obstruct() {},
-    //   collides() {},
-    //   update(soldier) {
-    //     soldier.vel.x = this.speed;
-    //   },
-    // });
-    // const walk = new Walk();
-    // walk.speed = -30;
-    // walk.update = (soldier) => {
-    //   soldier.vel.x = walk.speed;
-    // };
-
     soldier.addTrait(new Walk());
     soldier.addTrait(new CanKnife());
     soldier.addTrait(new CollisionObject());

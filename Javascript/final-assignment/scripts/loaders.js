@@ -88,10 +88,6 @@ function setupEntities(levelSpec, level, entityFactory) {
       entity.pos.set(x, y);
       level.entities.add(entity);
     });
-    // const createEntity = entityFactory[name];
-    // const entity = createEntity();
-    // entity.pos.set(x, y);
-    // level.entities.add(entity);
   });
 
   const spriteLayer = createSpriteLayer(level.entities);

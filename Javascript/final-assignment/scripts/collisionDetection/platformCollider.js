@@ -64,14 +64,6 @@ export default class PlatformCollider {
           entity.obstruct(dirConsts.BOTTOM, match);
         }
       }
-      // else if (entity.vel.y < 0) {
-      //   // checks the collison against the head
-      //   if (entity.bounds.top < match.y2) {
-      //     entity.bounds.top = match.y2;
-      //     entity.vel.y = 0;
-      //     entity.obstruct(dirConsts.TOP, match);
-      //   }
-      // }
     });
   }
 }
