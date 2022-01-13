@@ -25,7 +25,7 @@
   left: 3%;
   align-items: center;
   position: absolute;
-  width: 140px;
+  width: 5%;
   display: flex;
   /* font-family: slug;
   color: #ebedea;
@@ -33,27 +33,7 @@
 }
 .game-status-indicator .health span {
   font-family: slug;
-  margin-left: 10px;
+  margin-left: 1rem;
   color: #fbeef0;
-  font-size: 80px;
-}
-.score {
-  position: absolute;
-  left: 35%;
-  transform: translateX(50%);
-  display: flex;
-  flex-flow: column wrap;
-  justify-content: center;
-  align-items: center;
-}
-.game-status-indicator .score .title {
-  font-family: slug;
-  color: #ffb505;
-  font-size: 50px;
-}
-.score span {
-  font-family: slug;
-  color: #ffb505;
-  margin-top: 40px;
-  font-size: 140px;
+  font-size: 6rem;
 }
