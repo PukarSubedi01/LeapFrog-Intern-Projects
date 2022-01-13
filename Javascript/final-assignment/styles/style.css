@@ -13,12 +13,14 @@
   image-rendering: pixelated;
   margin: auto;
   height: 100vh;
+  width: 100%;
 }
 
 .game-status-indicator {
   position: absolute;
   width: 100%;
   top: 2%;
+  display: none;
 }
 .game-status-indicator .health {
   top: 0;
@@ -29,8 +31,60 @@
   display: flex;
 }
 .game-status-indicator .health span {
-  font-family: slug;
   margin-left: 10px;
   color: #fbeef0;
   font-size: 4em;
+}
+.game-menu-wrapper {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.game-menu {
+  box-sizing: border-box;
+  border: white 5px solid;
+  border-radius: 20px;
+  padding: 40px;
+  position: absolute;
+  top: 20%;
+  left: 10%;
+  right: 10%;
+  text-align: center;
+  color: white;
+}
+.game-menu h1 {
+  font-size: 6em;
+  color: #f55700;
+  font-weight: bolder;
+}
+.game-menu h2 {
+  font-size: 4em;
+  color: #2e4895;
+  font-weight: bolder;
+  margin: 40px;
+}
+.game-menu p {
+  margin: 60px;
+  font-size: 1.5em;
+}
+#play-game,
+.restart-game {
+  color: green;
+
+  bottom: 10%;
+  width: 250px;
+  height: 50px;
+  border: none;
+  font-weight: 600;
+  font-size: 25px;
+  border-radius: 40px;
+}
+#play-game:hover,
+.restart-game:hover {
+  cursor: pointer;
+  background-color: white;
+  color: black;
+  border: black 1px solid;
+  transition: 0.4s ease-in-out;
 }

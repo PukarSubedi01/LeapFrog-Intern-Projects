@@ -12,6 +12,16 @@ const canvas = document.querySelector("canvas");
 canvas.height = constantVals.CANVAS_HEIGHT;
 canvas.width = constantVals.CANVAS_WIDTH;
 
+const playGame = document.getElementById("play-game");
+const gameStatus = document.querySelector(".game-status-indicator");
+const gameMenu = document.querySelector(".game-menu-wrapper");
+
+const missionStart = new Audio();
+missionStart.src = "./assets/sfx/mission1-start.mp3";
+
+const bgMusic = new Audio();
+bgMusic.src = "./assets/sfx/theme.mp3";
+
 function createPlayerEnv(playerEntity) {
   const playerEnv = new Entity();
   const playerControl = new PlayerController();
@@ -38,13 +48,18 @@ async function main(canvas) {
   fpsCalc.update = function update(deltaTime) {
     level.update(deltaTime);
     if (cam.pos.x < 4000) cam.pos.x = Math.max(0, marco.pos.x - 200);
-
     level.comp.drawLayer(context, cam);
   };
 
   fpsCalc.start();
+  playGame.addEventListener("click", () => {
+    missionStart.play();
 
-  const input = controller(marco);
-  input.listenTo(window);
+    bgMusic.play();
+    const input = controller(marco);
+    gameStatus.style.display = "block";
+    gameMenu.style.display = "none";
+    input.listenTo(window);
+  });
 }
 main(canvas);
