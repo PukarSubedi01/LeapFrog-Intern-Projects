@@ -12,7 +12,7 @@
   display: block;
   image-rendering: pixelated;
   margin: auto;
-  height: 100vh;
+  height: 80vh;
 }
 
 .game-status-indicator {
@@ -27,9 +27,6 @@
   position: absolute;
   width: 5%;
   display: flex;
-  /* font-family: slug;
-  color: #ebedea;
-  font-size: 100px; */
 }
 .game-status-indicator .health span {
   font-family: slug;
