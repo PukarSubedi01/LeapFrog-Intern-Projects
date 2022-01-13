@@ -5,11 +5,55 @@
   margin: 0;
   background: black;
   image-rendering: pixelated;
+  position: relative;
   height: 100vh;
 }
 .game-wrapper canvas {
   display: block;
   image-rendering: pixelated;
   margin: auto;
-  height: 80vh;
+  height: 100vh;
+}
+
+.game-status-indicator {
+  position: absolute;
+  width: 100%;
+  top: 2%;
+}
+.game-status-indicator .health {
+  top: 0;
+  left: 3%;
+  align-items: center;
+  position: absolute;
+  width: 140px;
+  display: flex;
+  /* font-family: slug;
+  color: #ebedea;
+  font-size: 100px; */
+}
+.game-status-indicator .health span {
+  font-family: slug;
+  margin-left: 10px;
+  color: #fbeef0;
+  font-size: 80px;
+}
+.score {
+  position: absolute;
+  left: 35%;
+  transform: translateX(50%);
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+}
+.game-status-indicator .score .title {
+  font-family: slug;
+  color: #ffb505;
+  font-size: 50px;
+}
+.score span {
+  font-family: slug;
+  color: #ffb505;
+  margin-top: 40px;
+  font-size: 140px;
 }

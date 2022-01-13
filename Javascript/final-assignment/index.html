@@ -1,18 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Metal Slug</title>
-    <link rel="stylesheet" href="./styles/reset.css">
-    <link rel="stylesheet" href="./styles/style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="./styles/reset.css" />
+    <link rel="stylesheet" href="./styles/style.css" />
+  </head>
+  <body>
     <div class="game-wrapper">
-        <canvas></canvas>
-
+      <canvas></canvas>
+      <div class="game-status-indicator">
+        <div class="health">
+          <img src="./assets/mission1/health-icon.png" alt="health-icon" /><span
+            id="health-points"
+            >100</span
+          >
+        </div>
+        <div class="score">
+          <div class="title">score</div>
+          <span id="score-points">0</span>
+        </div>
+      </div>
     </div>
     <script src="scripts/index.js" type="module"></script>
-</body>
+  </body>
 </html>

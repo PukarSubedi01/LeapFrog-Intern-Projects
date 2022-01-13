@@ -17,9 +17,13 @@ class Behaviour extends Trait {
     this.countHandler = 0;
   }
   collides(marco, otherEntities) {
-    if (otherEntities.canKnife) {
+    if (otherEntities.canKnife && otherEntities.canKnife.isAttacking) {
       marco.killable.decreaseHealthAfter = 0.5;
       marco.killable.attack(otherEntities.canKnife.damage);
+      if (otherEntities.canKnife.isAttacking) {
+        const health = document.getElementById("health-points");
+        health.innerHTML = marco.killable.health;
+      }
     }
   }
 }

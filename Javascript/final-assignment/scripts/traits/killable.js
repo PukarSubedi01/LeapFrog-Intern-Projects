@@ -22,6 +22,8 @@ export default class Killable extends Trait {
   revive() {
     this.isDead = false;
     this.deadTime = 0;
+    const health = document.getElementById("health-points");
+    health.innerHTML = 100;
   }
   update(entity, deltaTime, level) {
     if (this.isAttacked) {

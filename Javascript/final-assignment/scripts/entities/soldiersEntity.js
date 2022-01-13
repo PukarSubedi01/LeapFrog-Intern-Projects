@@ -20,6 +20,7 @@ class Behaviour extends Trait {
 
     if (soldier.killable.isDead) {
       soldier.isDead = true;
+      soldier.canKnife.isAttacking = false;
       this.countHandler++;
       if (this.countHandler === 1) {
         soldier.walk.speed = 0;
