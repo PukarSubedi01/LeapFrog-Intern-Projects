@@ -35,7 +35,6 @@ export function loadMarco(entityFactory) {
 }
 function createMarcoFactory(sprite, entityFactory) {
   const animateFrame = sprite.animations.get("run");
-
   function animateMarco(marco) {
     if (marco.jump.falling) {
       return "jump";
@@ -48,22 +47,38 @@ function createMarcoFactory(sprite, entityFactory) {
   function drawMarco(context) {
     sprite.draw(animateMarco(this), context, 0, 0, this.walk.heading < 0);
   }
-  function shootBullets(entity, level) {
-    const bullet = entityFactory.machineGunBullet();
+  function shootMachineGunBullets(entity, level) {
+    const machineGun = entityFactory.machineGunBullet();
     const bulletDirection = entity.walk.heading;
-
     if (bulletDirection === 1) {
-      bullet.pos.set(
+      machineGun.pos.set(
         entity.pos.x + entity.size.x,
         entity.pos.y + entity.size.x / 2
       );
     } else if (bulletDirection === -1) {
-      bullet.pos.set(entity.pos.x, entity.pos.y + entity.size.x / 2);
+      machineGun.pos.set(entity.pos.x, entity.pos.y + entity.size.x / 2);
     }
-    bullet.travel.direction = entity.walk.heading;
-    bullet.travel.initialBulletPosX = entity.pos.x;
+    machineGun.travel.direction = entity.walk.heading;
+    machineGun.travel.initialBulletPosX = entity.pos.x;
 
-    level.entities.add(bullet);
+    level.entities.add(machineGun);
+  }
+
+  function shootFireGunBullets(entity, level) {
+    const fireGun = entityFactory.fireGunBullet();
+    const bulletDirection = entity.walk.heading;
+    if (bulletDirection === 1) {
+      fireGun.pos.set(
+        entity.pos.x + entity.size.x,
+        entity.pos.y + entity.size.x / 2
+      );
+    } else if (bulletDirection === -1) {
+      fireGun.pos.set(entity.pos.x, entity.pos.y + entity.size.x / 2);
+    }
+    fireGun.travel.direction = entity.walk.heading;
+    fireGun.travel.initialBulletPosX = entity.pos.x;
+
+    level.entities.add(fireGun);
   }
 
   return function createMarco() {
@@ -71,7 +86,8 @@ function createMarcoFactory(sprite, entityFactory) {
     marco.size.set(marcoConstants.WIDTH, marcoConstants.HEIGHT);
 
     const shoot = new Shoot();
-    shoot.bullets.push(shootBullets);
+    shoot.machineGunBullets.push(shootMachineGunBullets);
+    shoot.fireGunBullets.push(shootFireGunBullets);
 
     marco.addTrait(shoot);
     marco.addTrait(new Killable());

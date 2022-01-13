@@ -1,7 +1,8 @@
 import { loadMarco } from "./marcoEntity.js";
 import { loadSoldiers } from "./soldiersEntity.js";
 import { loadPrisoners } from "./prisonersEntity.js";
-import { loadMachineGunBullet } from "./bulletsEntity.js";
+import { loadMachineGunBullet } from "./bullets/machineGun.js";
+import { loadFireGunBullet } from "./bullets/fireGun.js";
 import { loadElement } from "./elements.js";
 import { loadTank } from "./tank.js";
 
@@ -15,6 +16,7 @@ export function loadEntities() {
     loadSoldiers().then(addEntityAs("soldiers")),
     loadPrisoners(entityFactories).then(addEntityAs("prisoners")),
     loadMachineGunBullet().then(addEntityAs("machineGunBullet")),
+    loadFireGunBullet().then(addEntityAs("fireGunBullet")),
     loadElement().then(addEntityAs("compensationElement")),
     loadTank().then(addEntityAs("tank")),
   ]).then(() => entityFactories);

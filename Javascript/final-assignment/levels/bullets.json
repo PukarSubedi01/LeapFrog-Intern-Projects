@@ -1,0 +1,72 @@
+{
+  "imageUrl": "./assets/mission1/weapons1.png",
+  "frames": [
+    {
+      "name": "machinegun-bullet",
+      "props": {
+        "x": 240,
+        "y": 306,
+        "subSetElementWidth": 35,
+        "subsetElementHeight": 20,
+        "width": 80,
+        "height": 40
+      }
+    },
+    {
+      "name": "fire-bullet1",
+      "props": {
+        "x": 240,
+        "y": 342,
+        "subSetElementWidth": 33,
+        "subsetElementHeight": 20,
+        "width": 80,
+        "height": 40
+      }
+    },
+    {
+      "name": "fire-bullet2",
+      "props": {
+        "x": 271,
+        "y": 340,
+        "subSetElementWidth": 40,
+        "subsetElementHeight": 28,
+        "width": 87,
+        "height": 48
+      }
+    },
+    {
+      "name": "fire-bullet3",
+      "props": {
+        "x": 314,
+        "y": 340,
+        "subSetElementWidth": 56,
+        "subsetElementHeight": 28,
+        "width": 104,
+        "height": 48
+      }
+    },
+    {
+      "name": "fire-bullet4",
+      "props": {
+        "x": 375,
+        "y": 335,
+        "subSetElementWidth": 66,
+        "subsetElementHeight": 35,
+        "width": 114,
+        "height": 55
+      }
+    }
+  ],
+  "animations": [
+    {
+      "name": "machineGunBullet",
+      "frameLen": 10,
+      "frames": ["machinegun-bullet"]
+    },
+    {
+      "name": "fireBullet",
+      "frameLen": 0.1,
+      "frames": ["fire-bullet1", "fire-bullet2", "fire-bullet3", "fire-bullet4"]
+    }
+  ]
+}

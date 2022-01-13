@@ -6,10 +6,12 @@ export default class Shoot extends Trait {
     this.canShoot = false;
     this.coolDown = this.interval;
     this.dir = 1;
-    this.bullets = [];
+    this.defaultGun = true;
+    this.machineGunBullets = [];
+    this.fireGunBullets = [];
   }
-  shoot(entity, level) {
-    for (const bullet of this.bullets) {
+  shoot(entity, level, bulletType) {
+    for (const bullet of bulletType) {
       bullet(entity, level);
     }
   }
@@ -22,9 +24,11 @@ export default class Shoot extends Trait {
   }
   update(entity, deltaTime, level) {
     this.coolDown -= deltaTime;
-
-    if (this.coolDown <= 0 && this.canShoot) {
-      this.shoot(entity, level);
+    if (this.coolDown <= 0 && this.canShoot && this.defaultGun) {
+      this.shoot(entity, level, this.machineGunBullets);
+      this.coolDown = this.interval;
+    } else if (this.coolDown <= 0 && this.canShoot && !this.defaultGun) {
+      this.shoot(entity, level, this.fireGunBullets);
       this.coolDown = this.interval;
     }
   }

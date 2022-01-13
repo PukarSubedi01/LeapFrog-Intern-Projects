@@ -4,7 +4,7 @@
     {
       "name": "fireGun",
       "props": {
-        "x": 62,
+        "x": 112,
         "y": 1000,
         "subSetElementWidth": 22,
         "subsetElementHeight": 20,
