@@ -15,7 +15,6 @@ export default class Travel extends Trait {
     entity.pos.x += entity.vel.x * deltaTime * this.direction;
 
     entity.pos.y += entity.vel.y * deltaTime;
-    console.log(this.maxTravelDistance, this.initialBulletPosX);
     if (this.direction === 1 && entity.pos.x > this.maxTravelDistanceRight) {
       level.entities.delete(entity);
     } else if (

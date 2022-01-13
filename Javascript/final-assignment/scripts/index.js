@@ -37,13 +37,12 @@ async function main(canvas) {
 
   fpsCalc.update = function update(deltaTime) {
     level.update(deltaTime);
-    cam.pos.x = Math.max(0, marco.pos.x - 200);
+    if (cam.pos.x < 4000) cam.pos.x = Math.max(0, marco.pos.x - 200);
 
     level.comp.drawLayer(context, cam);
   };
 
   fpsCalc.start();
-  mouseDebugger(canvas, marco, cam);
 
   const input = controller(marco);
   input.listenTo(window);

@@ -11,11 +11,11 @@ export function controller(entity) {
   input.addMapping("Enter", (keyState) => {
     entity.shoot.shootingState(keyState);
   });
-  input.addMapping("ArrowRight", (keyState) => {
+  input.addMapping("KeyD", (keyState) => {
     entity.walk.dir += keyState ? 1 : -1;
   });
 
-  input.addMapping("ArrowLeft", (keyState) => {
+  input.addMapping("KeyA", (keyState) => {
     entity.walk.dir += -keyState ? -1 : 1;
   });
   return input;

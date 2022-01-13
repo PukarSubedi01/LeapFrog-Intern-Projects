@@ -9,7 +9,6 @@ export default class GetInside extends Trait {
   }
   update() {
     if (this.canGetInside) {
-      console.log("asd");
     }
   }
 }
